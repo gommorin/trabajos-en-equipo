@@ -1,7 +1,7 @@
 # DESAFÍO MEDIUM PARTE 2 > REQUERIMIENTOS ISRA
 - Vamos a trabajar una maqueta basada en la homepage de Medium. La página debe realizar las siguiente funciones:
 
-# Funciones Necesarias:
+## Funciones Necesarias:
 
 ### Post Nuevo
 - Subir nuevos post a el endpoint asignado a tu equipo: https://ajaxclass9g.firebaseio.com/{nombre_del_equipo}/medium/posts/.json
