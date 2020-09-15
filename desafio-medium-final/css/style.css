@@ -1,3 +1,80 @@
-body {
-    font-family: medium-content-sans-serif-font, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
-  }
+@font-face {
+  font-family: Charter;
+  src: local("fonts/charter/charbib.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Kievit;
+  src: local("fonts/kievit/KievitOT-Regular.otf") format("opentype");
+  font-weight: normal;
+}
+
+p {
+  font-family: Kievit, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Charter, serif;
+}
+
+.custom-navbar {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.custom-navbar .btn-primary.btn-right {
+  background-color: white;
+  background-image: url("/other_files/desafio-medium/images/icon-right-arrow.svg");
+}
+
+.custom-navbar .btn-primary.btn-right:active {
+  background-color: white;
+}
+
+.custom-navbar .btn-primary.btn-left {
+  background-color: white;
+  background-image: url("/other_files/desafio-medium/images/icon-left-arrow.svg");
+}
+
+.custom-navbar .btn-primary.btn-left:active {
+  background-color: white;
+}
+
+.custom-navbar #box-wrapper {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  overflow: auto;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+}
+
+.custom-navbar #box-wrapper li {
+  display: block;
+  margin: 0 0.8rem;
+  padding: 0;
+  font-size: 14px;
+  color: grey;
+}
+
+.custom-navbar #box-wrapper li:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.custom-navbar #box-wrapper::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+.custom-navbar #box-wrapper::-webkit-scrollbar-track {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */

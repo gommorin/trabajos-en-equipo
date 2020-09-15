@@ -1,0 +1,77 @@
+@font-face {
+    font-family: Charter;
+    src: local("fonts/charter/charbib.ttf") format("truetype");
+    font-weight:normal;
+}
+
+@font-face {
+    font-family: Kievit;
+    src: local("fonts/kievit/KievitOT-Regular.otf") format("opentype");
+    font-weight:normal;
+}
+
+p {
+    font-family: Kievit, sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: Charter, serif;
+}
+
+.custom-navbar{
+    .btn-primary.btn-right {
+        background-color: white;
+        background-image: url("/other_files/desafio-medium/images/icon-right-arrow.svg");    
+        &:active{
+         background-color:white;
+        }
+    }
+
+    .btn-primary.btn-left {
+        background-color:white;
+        background-image: url("/other_files/desafio-medium/images/icon-left-arrow.svg");     
+        &:active{
+       
+            
+            background-color:white;
+    }
+}
+    justify-content: space-around;
+   
+    
+    #box-wrapper {
+        margin:0;
+        padding:0;
+        list-style-type: none;
+        display:flex;
+        flex-direction: row;        
+        overflow:auto;
+        white-space:nowrap;
+        scroll-behavior: smooth;
+        li {
+            display: block;     
+            margin:0 0.8rem;
+            padding:0;
+            font-size: 14px;
+            color:grey;
+            &:hover{
+                color:black;
+                cursor: pointer;
+            }
+        }
+ 
+        //Con esta clase hago que no aparezca es el scrollbar
+         &::-webkit-scrollbar {
+            width:0 !important;
+          }
+        
+        //no requiero de los botones de la SB, se hicieron botones para manejar la función de JS
+        &::-webkit-scrollbar-button:single-button {
+    
+        }
+        //con esta clase hago que no aparezca el track de la scrollbar
+        &::-webkit-scrollbar-track {
+            display:none;
+        }        
+    }
+}
