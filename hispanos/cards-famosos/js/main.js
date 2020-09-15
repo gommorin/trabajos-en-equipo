@@ -38,8 +38,6 @@ const guardarPersonaje = () => {
         })
 }
 
-$('#register').click(guardarPersonaje)
-
 const obtenerPersonajes = () => {
     $.ajax({ 
         url: `https://ajaxclass9g.firebaseio.com/eddy-lucho/historicCharacters/.json`, 
@@ -52,7 +50,7 @@ const obtenerPersonajes = () => {
                 console.log( personajes[llave] )
                 let { name, country, gender, dob, summary, photo } = personajes[llave]                
                 $("#cards").append(`
-                    <div class="col mb-4">
+                    <div class="col mb-4 character-card ${gender}">
                     <!-- Card -->
                         <div class="card">
                             <!--Card image-->
@@ -97,9 +95,6 @@ const obtenerPersonajes = () => {
                     // let llave = event.target.dataset.llavePersonaje
                     // Recordatorio: event es un objeto que contiene todos los datdos del evento que estamos escuchando
                     // event.target indica el elemento específico al que le sucedio el evento
-                    // event: cayo un árbol sobre un auto gris
-                    // event.target: un auto gris
-                    // event.target.color: gris
                     let llave = $(event.target).data("llave-personaje")
                     $.ajax({
                         url: `https://ajaxclass9g.firebaseio.com/eddy-lucho/characters/${llave}.json`,
@@ -110,11 +105,40 @@ const obtenerPersonajes = () => {
                         error: ( error ) => {
                             console.log(error)
                         } 
-                    });
+                    })
                 })
             }
         }
     })
 }
 
+/*
+const filterByGender = event => {
+    console.log($(event.target).val())
+    let gender = $(event.target).val()
+    
+    //$(".card").filter(":first-of-type")
+    switch( gender ){
+        $(".character-card").show()
+        case 'male':
+            console.log("masculino")
+            // la lógica dice: quiero filtrar de una clase lo que coincida con el caso 'male'
+            // hay que hacer una nueva clase para poder filtrar.
+            // agregamos al código de la col un character-card
+            $(".character-card").filter(".character-card.female").hide() // me oculta los que coincidan con la clase female
+            break;
+        case 'female':
+            console.log("femenino")
+            $(".character-card").filter(".character-card.male").hide() // me oculta los que coincidan con la clase male
+            break;
+        case 'all':
+            console.log("todos")
+            break;
+    }
+} 
+
+$("#genderFilter").change(filterByGender)
+*/
+
+$('#register').click(guardarPersonaje)
 obtenerPersonajes()
