@@ -9,14 +9,6 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .custom-navbar{
-    .btn-primary.btn-right {
-        background-color: white;
-        background-image: url("images/icon-right-arrow.svg");    
-        &:active{
-            background-color:white;
-        }
-    }
-
     .btn-primary.btn-left {
         background-color:white;
         background-image: url("images/icon-left-arrow.svg");     
@@ -24,8 +16,16 @@ h1,h2,h3,h4,h5,h6 {
             background-color:white;
         }
     }
+
+    .btn-primary.btn-right {
+        background-color: white;
+        background-image: url("images/icon-right-arrow.svg");    
+        &:active{
+            background-color:white;
+        }
+    }
    
-    #box-wrapper {
+    ul {
         margin:0;
         padding:0;
         list-style-type: none;
@@ -61,3 +61,83 @@ h1,h2,h3,h4,h5,h6 {
         }        
     }
 }
+
+nav{
+    max-height: 1000px;
+    .logo {
+        #logo-mobile{
+            fill: $darkest-grey;
+        }
+    }
+    .nav-container1{        
+        svg{
+            margin-right: 20px;
+            fill: $light-grey;
+            margin-left: 20px;
+        }
+        svg:hover{
+            cursor: pointer;
+            fill: $darkest-grey;
+        }
+    }
+  
+    .nav-container button {
+        font-family: source sans pro, sans-serif;
+        font-weight: 400;
+    }
+  
+    .btn:hover{
+        background-color: white;
+        color: #6c757d;
+        border-color: #333333;
+    }
+    p{
+        background-color: fuchsia;
+        color:white;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+        margin: 20px;
+        font-size: 20px;
+        text-align: center;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .signup:hover{
+        cursor: pointer;
+    }
+    .nav-container2{
+        .navul{
+            width: 100%;
+            
+            .navli{
+                text-transform: uppercase;
+                font-size: 16px;
+                color: rgba(0,0,0,.54);
+            }
+            .navli:hover{
+                cursor: pointer;
+                color: #212529;
+            }
+        }
+        .navul::-webkit-scrollbar{
+            background-color: white;
+            height: 10px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        .navul::-webkit-scrollbar-button{
+            display: none;
+              background-color: white;
+              border: 1px solid $light-grey;
+              height: 100px;
+              position: absolute;
+              top: 50px;
+        }
+    }
+}
+  
