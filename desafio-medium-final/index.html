@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafío Front | Medium Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-    <!-- Material Design Bootstrap -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet"> -->
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" class="js-glyph-" id="glyph-8" href="https://glyph.medium.com/css/e/sr/latin/e/ssr/latin/e/ssb/latin/m2.css">
     <link rel="stylesheet" href="css/style.css">
@@ -86,6 +88,89 @@
             </svg>
         </div>
     </nav>
+
+    <!-- FORMULARIO -->
+    <div class="container">
+        <div class="row border border-primary d-flex flex-column">
+            <div class="column m-3">
+                <div class="form-group">
+                    <label for="mediumTitle">Título</label>
+                    <input type="text" class="form-control" id="mediumTitle" placeholder="Ingrese el título del artículo">
+                  </div>
+            </div>
+            <div class="column m-3">
+                <div class="form-group">
+                    <label for="mediumSummary">Resumen</label>
+                    <input type="text" class="form-control" id="mediumSummary" placeholder="Ingrese un breve resumen">
+                    </div>
+            </div>
+            <div class="column m-3">
+                <div class="form-group">
+                    <label for="mediumUser">Usuario</label>
+                    <input type="text" class="form-control" id="mediumUser" placeholder="Ingrese su nombre y apellido">
+                    </div>
+            </div>
+            <div class="column m-3">
+                <div class="form-group">
+                    <label for="mediumSection">Elija la sección</label>
+                    <select multiple class="form-control" id="mediumSection">
+                      <option>History</option>
+                      <option>Art</option>
+                      <option>Beauty</option>
+                      <option>Books</option>
+                      <option>Comics</option>
+                      <option>Culture</option>
+                      <option>Film</option>
+                      <option>Food</option>
+                      <option>Gaming</option>
+                      <option>Humor</option>
+                      <option>Makers</option>
+                      <option>Music</option>
+                      <option>Nonfiction</option>
+                      <option>Photography</option>
+                      <option>Podcast</option>
+                    </select>
+                  </div>
+            </div>
+            <div class="column m-3">
+                <div class="form-group">
+                    <label for="mediumDate">Fecha de publicación</label>
+                    <input type="date" class="form-control" id="mediumDate">
+                </div>
+            </div>
+            <div class="column m-3">
+                <div class="form-group">
+                    <label for="mediumTime">Escriba los minutos de lectura</label>
+                    <input type="number" class="form-control" id="mediumTime" placeholder="Por ejemplo: 7">
+                </div>
+            </div>
+            <div class="column m-3">
+                <div class="form-group">
+                    <label for="mediumPopular">¿El artículo es popular?</label>
+                    <select class="form-control" id="mediumPopular">
+                      <option>Sí</option>
+                      <option>No</option>
+                    </select>
+                  </div>
+            </div>
+            <div class="column m-3">
+                <div class="form-group">
+                    <label for="mediumRanking">En escala del 1 al 100, ¿Qué tan popular es?</label>
+                    <input type="number" class="form-control" id="mediumRanking" placeholder="Por ejemplo: 52">
+                </div>
+            </div>
+            <div class="column m-3">
+                <div class="form-group">
+                    <label for="mediumEditorPick">¿El artículo está clasificado como Editor's Pick?</label>
+                    <select class="form-control" id="mediumEditorPick">
+                      <option>Sí</option>
+                      <option>No</option>
+                    </select>
+                  </div>
+            </div>
+        </div>
+    </div>
+
     <!-- TOP SECTION > FEATURED ARTICLES AND EDITOR'S PICK -->
     <section class="container" id="main-articles">
         <div class="row">
@@ -385,6 +470,95 @@
             </div>
         <!-- ASIDE > NEWS FROM YOUR NETWORK AND POPULAR BLOCKS -->
             <aside class="d-none d-md-block d-lg-block d-xl-block col-12 col-md-4 sticky-top">
+                <div class="card mb-3">
+                    <div class="news-cover col-12 d-flex align-items-end">
+                        <div class="col-7 p-0" height="100%">
+                            <h6><strong>New from your network</strong></h6>
+                        </div>
+                        <div class="col-5 p-0" height="100%">
+                            <img class="card-img-top" src="https://cdn-images-1.medium.com/proxy/1*K3oqw1Ed_6VMaql4HojuDg.png" alt="Card image cap">
+                        </div> 
+                    </div>
+                    <div class="news-list bg-light">
+                        <ul class="list-group list-group-flush d-flex align-items-start justify-content-center w-100 py-3">
+                            <li class="list-group-item bg-light my-2 w-100">
+                                <div class="media">
+                                    <img class="mr-3" src="https://cdn-images-1.medium.com/fit/c/64/64/1*UcrKg316UCdlnENBxBkeTA.png" alt="placeholder image" width="40px" height="40px">
+                                    <div class="media-body">
+                                        <p id="card-title" class="mt-0 mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                                        <div class="d-flex justify-content-center" id="card-footer">
+                                            <div class="col-12 p-0">
+                                                <div class="d-flex m-0" id="who">
+                                                    <a class="mt-0 mb-1" href="" id="author">Author </a>
+                                                </div>
+                                                <div class="d-flex" id="time">
+                                                    <p class="mt-0 mb-1">Aug 14・8 min read</p>
+                                                    <p class="mt-0 mb-1 mx-2"> ★ </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item bg-light my-2 w-100">
+                                <div class="media">
+                                    <img class="mr-3" src="https://mk0trickyphotos51tq5.kinstacdn.com/wp-content/uploads/2017/08/final-1.png" alt="placeholder image" width="40px" height="40px">
+                                    <div class="media-body">
+                                        <p id="card-title" class="mt-0 mb-1">Lorem ipsum dolor sit amet</p>
+                                        <div class="d-flex justify-content-center" id="card-footer">
+                                            <div class="col-12 p-0">
+                                                <div class="d-flex m-0" id="who">
+                                                    <a class="mt-0 mb-1" href="" id="author">Author </a>
+                                                </div>
+                                                <div class="d-flex" id="time">
+                                                    <p class="mt-0 mb-1">Jul 20・3 min read</p>
+                                                    <p class="mt-0 mb-1 mx-2"> ★ </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item bg-light my-2 w-100">
+                                <div class="media">
+                                    <img class="mr-3" src="https://www.pngkey.com/png/full/954-9542741_jessica-round-flyer-circle.png" alt="placeholder image" width="40px" height="40px">
+                                    <div class="media-body">
+                                        <p id="card-title" class="mt-0 mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, maiores</p>
+                                        <div class="d-flex justify-content-center" id="card-footer">
+                                            <div class="col-12 p-0">
+                                                <div class="d-flex m-0" id="who">
+                                                    <a class="mt-0 mb-1" href="" id="author">Author </a>
+                                                </div>
+                                                <div class="d-flex" id="time">
+                                                    <p class="mt-0 mb-1">Aug 7・5 min read</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item bg-light my-2 w-100">
+                                <div class="media">
+                                    <img class="mr-3" src="https://cdn-images-1.medium.com/fit/c/64/64/1*UcrKg316UCdlnENBxBkeTA.png" alt="placeholder image" width="40px" height="40px">
+                                    <div class="media-body">
+                                        <p id="card-title" class="mt-0 mb-1">Lorem ipsum dolor sit amet consectetur adipisicing</p>
+                                        <div class="d-flex justify-content-center" id="card-footer">
+                                            <div class="col-12 p-0">
+                                                <div class="d-flex m-0" id="who">
+                                                    <a class="mt-0 mb-1" href="" id="author">Author </a>
+                                                </div>
+                                                <div class="d-flex" id="time">
+                                                    <p class="mt-0 mb-1">Jun 22・8 min read</p>
+                                                    <p class="mt-0 mb-1 mx-2"> ★ </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-10">
                         <h5 class="border-bottom pb-3 pt-4 mb-4">Popular on Medium</h5>

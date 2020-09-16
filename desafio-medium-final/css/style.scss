@@ -1,44 +1,30 @@
-@font-face {
-    font-family: Charter;
-    src: local("fonts/charter/charbib.ttf") format("truetype");
-    font-weight:normal;
-}
-
-@font-face {
-    font-family: Kievit;
-    src: local("fonts/kievit/KievitOT-Regular.otf") format("opentype");
-    font-weight:normal;
-}
-
-p {
-    font-family: Kievit, sans-serif;
-}
-
 h1,h2,h3,h4,h5,h6 {
-    font-family: Charter, serif;
+    font-family: source sans pro, sans-serif;
+    font-weight: 600;    
+}
+
+* {
+    font-family: source sans pro, sans-serif;
+    font-weight: 400;
 }
 
 .custom-navbar{
     .btn-primary.btn-right {
         background-color: white;
-        background-image: url("/other_files/desafio-medium/images/icon-right-arrow.svg");    
+        background-image: url("images/icon-right-arrow.svg");    
         &:active{
-         background-color:white;
+            background-color:white;
         }
     }
 
     .btn-primary.btn-left {
         background-color:white;
-        background-image: url("/other_files/desafio-medium/images/icon-left-arrow.svg");     
-        &:active{
-       
-            
+        background-image: url("images/icon-left-arrow.svg");     
+        &:active {
             background-color:white;
+        }
     }
-}
-    justify-content: space-around;
    
-    
     #box-wrapper {
         margin:0;
         padding:0;
@@ -59,15 +45,15 @@ h1,h2,h3,h4,h5,h6 {
                 cursor: pointer;
             }
         }
- 
+
         //Con esta clase hago que no aparezca es el scrollbar
-         &::-webkit-scrollbar {
+            &::-webkit-scrollbar {
             width:0 !important;
-          }
+            }
         
         //no requiero de los botones de la SB, se hicieron botones para manejar la función de JS
         &::-webkit-scrollbar-button:single-button {
-    
+
         }
         //con esta clase hago que no aparezca el track de la scrollbar
         &::-webkit-scrollbar-track {

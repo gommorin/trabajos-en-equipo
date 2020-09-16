@@ -1,31 +1,16 @@
-@font-face {
-  font-family: Charter;
-  src: local("fonts/charter/charbib.ttf") format("truetype");
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: Kievit;
-  src: local("fonts/kievit/KievitOT-Regular.otf") format("opentype");
-  font-weight: normal;
-}
-
-p {
-  font-family: Kievit, sans-serif;
-}
-
 h1, h2, h3, h4, h5, h6 {
-  font-family: Charter, serif;
+  font-family: source sans pro, sans-serif;
+  font-weight: 600;
 }
 
-.custom-navbar {
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+* {
+  font-family: source sans pro, sans-serif;
+  font-weight: 400;
 }
 
 .custom-navbar .btn-primary.btn-right {
   background-color: white;
-  background-image: url("/other_files/desafio-medium/images/icon-right-arrow.svg");
+  background-image: url("images/icon-right-arrow.svg");
 }
 
 .custom-navbar .btn-primary.btn-right:active {
@@ -34,7 +19,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .custom-navbar .btn-primary.btn-left {
   background-color: white;
-  background-image: url("/other_files/desafio-medium/images/icon-left-arrow.svg");
+  background-image: url("images/icon-left-arrow.svg");
 }
 
 .custom-navbar .btn-primary.btn-left:active {
