@@ -11,7 +11,7 @@ h1,h2,h3,h4,h5,h6 {
 .custom-navbar{
     .btn-primary.btn-right {
         background-color: white;
-        background-image: url("images/icon-right-arrow.svg");    
+        background-image: url("/images/icon-right-arrow.svg");    
         &:active{
             background-color:white;
         }
@@ -19,13 +19,14 @@ h1,h2,h3,h4,h5,h6 {
 
     .btn-primary.btn-left {
         background-color:white;
-        background-image: url("images/icon-left-arrow.svg");     
+        background-image: url("/images/icon-left-arrow.svg");     
         &:active {
             background-color:white;
         }
     }
    
     #box-wrapper {
+        
         margin:0;
         padding:0;
         list-style-type: none;
@@ -52,9 +53,9 @@ h1,h2,h3,h4,h5,h6 {
             }
         
         //no requiero de los botones de la SB, se hicieron botones para manejar la función de JS
-        &::-webkit-scrollbar-button:single-button {
+      //  &::-webkit-scrollbar-button:single-button {
 
-        }
+      //  }
         //con esta clase hago que no aparezca el track de la scrollbar
         &::-webkit-scrollbar-track {
             display:none;

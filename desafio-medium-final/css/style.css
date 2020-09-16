@@ -10,7 +10,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .custom-navbar .btn-primary.btn-right {
   background-color: white;
-  background-image: url("images/icon-right-arrow.svg");
+  background-image: url("/images/icon-right-arrow.svg");
 }
 
 .custom-navbar .btn-primary.btn-right:active {
@@ -19,7 +19,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .custom-navbar .btn-primary.btn-left {
   background-color: white;
-  background-image: url("images/icon-left-arrow.svg");
+  background-image: url("/images/icon-left-arrow.svg");
 }
 
 .custom-navbar .btn-primary.btn-left:active {
