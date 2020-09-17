@@ -10,6 +10,7 @@ function obtainingArticle() {
             articlesCollection = response;
             let personajes = response;
 
+            
             console.log(personajes);
 
             $("#popular-article-one").empty;
