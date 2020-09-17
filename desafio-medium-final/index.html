@@ -6,7 +6,7 @@
     <title>Desafío Front | Medium Page</title>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
     <!-- Material Design Bootstrap
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet"> -->
     <!-- Bootstrap -->
@@ -16,7 +16,155 @@
 
 </head>
 <body>
-
+    <!-- MODAL FORMULARIO -->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="modal fade" id="modalForm" tabindex="-1" role="dialog" aria-labelledby="modalFormLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalFormLabel">Llena el siguiente formulario</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container">
+                                <div class="row border border-primary d-flex flex-column">
+                                    <div class="column m-3">
+                                        <div class="form-group">
+                                            <label for="mediumTitle">Título</label>
+                                            <input type="text" class="form-control" id="mediumTitle" placeholder="Ingrese el título del artículo">
+                                        </div>
+                                    </div>
+                                    <div class="column m-3">
+                                        <div class="form-group">
+                                            <label for="mediumSummary">Resumen</label>
+                                            <input type="text" class="form-control" id="mediumSummary" placeholder="Ingrese un breve resumen">
+                                            </div>
+                                    </div>
+                                    <div class="column m-3">
+                                        <div class="form-group">
+                                            <label for="mediumUser">Usuario</label>
+                                            <input type="text" class="form-control" id="mediumAvatar" placeholder="Pegue una URL con tu imagen">
+                                            <br>
+                                            <input type="text" class="form-control" id="mediumUser" placeholder="Ingrese su nombre y apellido">
+                                        </div>
+                                    </div>
+                                    <div class="column m-3">
+                                        <div class="form-group">
+                                            <label for="mediumSection">Elija la sección a la que corresponde</label>
+                                            <select multiple class="form-control" id="mediumSection">
+                                                <option>History</option>
+                                                <option>Art</option>
+                                                <option>Beauty</option>
+                                                <option>Books</option>
+                                                <option>Comics</option>
+                                                <option>Culture</option>
+                                                <option>Film</option>
+                                                <option>Food</option>
+                                                <option>Gaming</option>
+                                                <option>Humor</option>
+                                                <option>Makers</option>
+                                                <option>Music</option>
+                                                <option>Nonfiction</option>
+                                                <option>Photography</option>
+                                                <option>Podcast</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="column m-3">
+                                        <div class="form-group">
+                                            <label for="mediumDate">Elija una fecha de publicación</label>
+                                            <input type="date" class="form-control" id="mediumDate">
+                                        </div>
+                                    </div>
+                                    <div class="column m-3">
+                                        <div class="form-group">
+                                            <label for="mediumTime">Escriba los minutos de lectura</label>
+                                            <input type="number" class="form-control" id="mediumTime" placeholder="Por ejemplo: 7">
+                                        </div>
+                                    </div>
+                                    <div class="column m-3">
+                                        <div class="form-group">
+                                            <label for="mediumPopular">¿Considera que el artículo es popular?</label>
+                                            <select class="form-control" id="mediumPopular">
+                                                <option>Si</option>
+                                                <option>No</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="column m-3">
+                                        <div class="form-group">
+                                            <label for="mediumRanking">¿Qué tan popular es el artículo?</label>
+                                            <input type="number" class="form-control" id="mediumRanking" placeholder="Por ejemplo: 52">
+                                        </div>
+                                    </div>
+                                    <div class="column m-3">
+                                        <div class="form-group">
+                                            <label for="mediumEditorPick">¿El artículo está clasificado como Editor's Pick?</label>
+                                            <select class="form-control" id="mediumEditorPick">
+                                                <option>Si</option>
+                                                <option>No</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" style="line-height:1.15; font-size:14px;font-family: source sans pro, sans-serif;font-weight: 400" height="65px" data-dismiss="modal">Cancelar</button>
+                                        <button type="button" id="postButton" class="btn btn-dark post-modal-btn" data-post-key=${key}></button>" style="line-height:1.15; font-size:14px;font-family: source sans pro, sans-serif;font-weight: 400" height="65px" data-toggle="modal" data-target="#modalPost" data-whatever-again="modalPost">Continuar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MODAL ARTICULO -->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="modal fade bd-example-modal-xl" id="modalPost" tabindex="-1" role="dialog" aria-labelledby="postModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                        <div class="modal-content">
+                            <div class="card">
+                                <div class="card-body" id="post-detail">
+                                    <div class="col-8 offset-2">
+                                        <h1 class="card-title" id="card-title" id="postModalLabel"></h5>
+                                        <h3 class="card-subtitle mb-2 text-muted"id="card-summary"></h6>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <img id="card-avatar" src="${avatar}" class="rounded-circle dropdown-toggle" height="35px" type="button" alt="profile-avatar" id="dropdownAvatar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <caption class="card-text" id="card-user"></caption>
+                                                <caption class="card-text" id="card-date"></caption>
+                                                <caption class="card-text" id="card-time"></caption>
+                                                <div id="popularity">
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" enable-background="new 0 0 50 50" id="share-icon" height="25px"><path d="M30.3 13.7L25 8.4l-5.3 5.3-1.4-1.4L25 5.6l6.7 6.7z"/><path d="M24 7h2v21h-2z"/><path d="M35 40H15c-1.7 0-3-1.3-3-3V19c0-1.7 1.3-3 3-3h7v2h-7c-.6 0-1 .4-1 1v18c0 .6.4 1 1 1h20c.6 0 1-.4 1-1V19c0-.6-.4-1-1-1h-7v-2h7c1.7 0 3 1.3 3 3v18c0 1.7-1.3 3-3 3z"/></svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="svgIcon-use"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 00.706.03L12.5 16.85l5.662 4.126a.508.508 0 00.708-.03.5.5 0 00.118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 00-.676 0z" fill-rule="evenodd"></path></svg>
+                                                
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <textarea class="form-control" rows="10" id="writeContent" placeholder="Start typing"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" style="line-height:1.15; font-size:14px;font-family: source sans pro, sans-serif;font-weight: 400" height="65px" data-dismiss="modal">Cancelar</button>
+                                    <button type="button" id="post-modal-btn" class="btn btn-dark" style="line-height:1.15; font-size:14px;font-family: source sans pro, sans-serif;font-weight: 400" height="65px" data-toggle="modal" data-target="#modalPost" data-whatever-again="modalPost">Crea tu post</button>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
      <!-- NAVBAR -->
@@ -69,135 +217,34 @@
             </div>
         </div>
     </nav>
-    <!-- MODAL FORMULARIO -->
+
+    <!-- MENU SCROLLBAR -->
     <div class="container">
-        <div class="modal fade" id="modalForm" tabindex="-1" role="dialog" aria-labelledby="modalFormLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalFormLabel">Llena el siguiente formulario</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="container">
-                        <div class="row border border-primary d-flex flex-column">
-                            <div class="column m-3">
-                                <div class="form-group">
-                                    <label for="mediumTitle">Título</label>
-                                    <input type="text" class="form-control" id="mediumTitle" placeholder="Ingrese el título del artículo">
-                                </div>
-                            </div>
-                            <div class="column m-3">
-                                <div class="form-group">
-                                    <label for="mediumSummary">Resumen</label>
-                                    <input type="text" class="form-control" id="mediumSummary" placeholder="Ingrese un breve resumen">
-                                    </div>
-                            </div>
-                            <div class="column m-3">
-                                <div class="form-group">
-                                    <label for="mediumUser">Usuario</label>
-                                    <input type="text" class="form-control" id="mediumUser" placeholder="Ingrese su nombre y apellido">
-                                    </div>
-                            </div>
-                            <div class="column m-3">
-                                <div class="form-group">
-                                    <label for="mediumSection">Elija la sección</label>
-                                    <select multiple class="form-control" id="mediumSection">
-                                    <option>History</option>
-                                    <option>Art</option>
-                                    <option>Beauty</option>
-                                    <option>Books</option>
-                                    <option>Comics</option>
-                                    <option>Culture</option>
-                                    <option>Film</option>
-                                    <option>Food</option>
-                                    <option>Gaming</option>
-                                    <option>Humor</option>
-                                    <option>Makers</option>
-                                    <option>Music</option>
-                                    <option>Nonfiction</option>
-                                    <option>Photography</option>
-                                    <option>Podcast</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="column m-3">
-                                <div class="form-group">
-                                    <label for="mediumDate">Fecha de publicación</label>
-                                    <input type="date" class="form-control" id="mediumDate">
-                                </div>
-                            </div>
-                            <div class="column m-3">
-                                <div class="form-group">
-                                    <label for="mediumTime">Escriba los minutos de lectura</label>
-                                    <input type="number" class="form-control" id="mediumTime" placeholder="Por ejemplo: 7">
-                                </div>
-                            </div>
-                            <div class="column m-3">
-                                <div class="form-group">
-                                    <label for="mediumPopular">¿El artículo es popular?</label>
-                                    <select class="form-control" id="mediumPopular">
-                                    <option>Sí</option>
-                                    <option>No</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="column m-3">
-                                <div class="form-group">
-                                    <label for="mediumRanking">En escala del 1 al 100, ¿Qué tan popular es?</label>
-                                    <input type="number" class="form-control" id="mediumRanking" placeholder="Por ejemplo: 52">
-                                </div>
-                            </div>
-                            <div class="column m-3">
-                                <div class="form-group">
-                                    <label for="mediumEditorPick">¿El artículo está clasificado como Editor's Pick?</label>
-                                    <select class="form-control" id="mediumEditorPick">
-                                    <option>Sí</option>
-                                    <option>No</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Send message</button>
-                            </div>
-                        </div>
-                    </div>
+        <div class="row my-4">
+            <div class="col-12 d-block">   
+                <div class="custom-navbar d-flex flex-row px-2 align-items-start">
+                    <button id="left-arrow" class="btn border-0 btn-left p-0" type="button"></button> 
+                    <ul id="box-wrapper">
+                        <li>HOME</li>
+                        <li>POPULAR</li>
+                        <li>MOMENTUM</li>
+                        <li>CORONAVIRUS</li>
+                        <li>ONEZERO</li>
+                        <li>ELEMENTAL</li>
+                        <li>GEN</li>
+                        <li>ZORA</li>
+                        <li>FORGE</li>
+                        <li>HUMAN PARTS</li>
+                        <li>MARKER</li>
+                        <li>LEVEL</li>
+                        <li>HEATED</li>
+                        <li>MORE</li>
+                    </ul>
+                    <button id="right-arrow" class="btn border-0 btn-right p-0" type="button"></button> 
                 </div>
             </div>
         </div>
     </div>
-
-
-
-            <!-- MENU SCROLLBAR -->
-            <div class="row my-4">
-                <div class="col-12 d-block">   
-                    <div class="custom-navbar d-flex flex-row px-2">
-                        <button class="btn btn-primary btn-outline-light btn-left" type="button"></button> 
-                        <ul id="box-wrapper">
-                            <li>HOME</li>
-                            <li>POPULAR</li>
-                            <li>MOMENTUM</li>
-                            <li>CORONAVIRUS</li>
-                            <li>ONEZERO</li>
-                            <li>ELEMENTAL</li>
-                            <li>GEN</li>
-                            <li>ZORA</li>
-                            <li>FORGE</li>
-                            <li>HUMAN PARTS</li>
-                            <li>MARKER</li>
-                            <li>LEVEL</li>
-                            <li>HEATED</li>
-                            <li>MORE</li>
-                        </ul>
-                        <button class="btn btn-primary border-0 btn-outline-light btn-right" type="button"></button> 
-                    </div>
-                </div>
-            </div>
-
 
     <!-- TOP SECTION > FEATURED ARTICLES AND EDITOR'S PICK -->
     <section class="container" id="main-articles">
@@ -237,22 +284,22 @@
                         <img src="https://picsum.photos/200" class="mr-3" style="width: 100px; height:100px;">
                         <div class="media-body">
                           <h4 class="mt-0 mb-1 cursor-pointer">List-based media object</h4>
-                                  <div>
-                                      <p class="m-0">Nome Cognome</p>
-                                      <div class="d-flex justify-content-between">
-                                          <div>
-                                              <p style="color:#757575" data-toggle="tooltip" data-placement="top" title="Updated Ago 21">Agu 13- 5 min read
-                                                  <span>
-                                                      <svg
-                                                      width="15" height="15"><path d="M7.438 2.324c.034-.099.09-.099.123 0l1.2 3.53a.29.29 0 00.26.19h3.884c.11 0 .127.049.038.111L9.8 8.327a.271.271 0 00-.099.291l1.2 3.53c.034.1-.011.131-.098.069l-3.142-2.18a.303.303 0 00-.32 0l-3.145 2.182c-.087.06-.132.03-.099-.068l1.2-3.53a.271.271 0 00-.098-.292L2.056 6.146c-.087-.06-.071-.112.038-.112h3.884a.29.29 0 00.26-.19l1.2-3.52z"></path></svg>
-                                                  </span>
-                                              </p>
-                                          </div>  
-                                          <div>
-                                              <span class="svgIcon svgIcon--moreFilled svgIcon--25px is-flushRight"><svg class="svgIcon-use" width="25" height="25"><path d="M5 12.5c0 .552.195 1.023.586 1.414.39.39.862.586 1.414.586.552 0 1.023-.195 1.414-.586.39-.39.586-.862.586-1.414 0-.552-.195-1.023-.586-1.414A1.927 1.927 0 007 10.5c-.552 0-1.023.195-1.414.586-.39.39-.586.862-.586 1.414zm5.617 0c0 .552.196 1.023.586 1.414.391.39.863.586 1.414.586.552 0 1.023-.195 1.414-.586.39-.39.586-.862.586-1.414 0-.552-.195-1.023-.586-1.414a1.927 1.927 0 00-1.414-.586c-.551 0-1.023.195-1.414.586-.39.39-.586.862-.586 1.414zm5.6 0c0 .552.195 1.023.586 1.414.39.39.868.586 1.432.586.551 0 1.023-.195 1.413-.586.391-.39.587-.862.587-1.414 0-.552-.196-1.023-.587-1.414a1.927 1.927 0 00-1.413-.586c-.565 0-1.042.195-1.432.586-.39.39-.586.862-.587 1.414z" fill-rule="evenodd"></path></svg></span>
-                                          </div>  
-                                      </div>
-                                  </div>
+                            <div>
+                                <p class="m-0">Nome Cognome</p>
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <p style="color:#757575" data-toggle="tooltip" data-placement="top" title="Updated Ago 21">Agu 13- 5 min read
+                                            <span>
+                                                <svg
+                                                width="15" height="15"><path d="M7.438 2.324c.034-.099.09-.099.123 0l1.2 3.53a.29.29 0 00.26.19h3.884c.11 0 .127.049.038.111L9.8 8.327a.271.271 0 00-.099.291l1.2 3.53c.034.1-.011.131-.098.069l-3.142-2.18a.303.303 0 00-.32 0l-3.145 2.182c-.087.06-.132.03-.099-.068l1.2-3.53a.271.271 0 00-.098-.292L2.056 6.146c-.087-.06-.071-.112.038-.112h3.884a.29.29 0 00.26-.19l1.2-3.52z"></path></svg>
+                                            </span>
+                                        </p>
+                                    </div>  
+                                    <div>
+                                        <span class="svgIcon svgIcon--moreFilled svgIcon--25px is-flushRight"><svg class="svgIcon-use" width="25" height="25"><path d="M5 12.5c0 .552.195 1.023.586 1.414.39.39.862.586 1.414.586.552 0 1.023-.195 1.414-.586.39-.39.586-.862.586-1.414 0-.552-.195-1.023-.586-1.414A1.927 1.927 0 007 10.5c-.552 0-1.023.195-1.414.586-.39.39-.586.862-.586 1.414zm5.617 0c0 .552.196 1.023.586 1.414.391.39.863.586 1.414.586.552 0 1.023-.195 1.414-.586.39-.39.586-.862.586-1.414 0-.552-.195-1.023-.586-1.414a1.927 1.927 0 00-1.414-.586c-.551 0-1.023.195-1.414.586-.39.39-.586.862-.586 1.414zm5.6 0c0 .552.195 1.023.586 1.414.39.39.868.586 1.432.586.551 0 1.023-.195 1.413-.586.391-.39.587-.862.587-1.414 0-.552-.196-1.023-.587-1.414a1.927 1.927 0 00-1.413-.586c-.565 0-1.042.195-1.432.586-.39.39-.586.862-.587 1.414z" fill-rule="evenodd"></path></svg></span>
+                                    </div>  
+                                </div>
+                            </div>
                         </div>
                     </li>
                     <li class="media" style="margin-bottom: inherit;">
