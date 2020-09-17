@@ -134,7 +134,7 @@ nav .nav-container2 .navul::-webkit-scrollbar-button {
 */
 .custom-navbar #left-arrow {
   background-color: transparent;
-  background-image: url("/desafio-medium-final/images/icon-left-arrow.svg");
+  background-image: url("/images/icon-left-arrow.svg");
   width: 30px;
   height: 30px;
 }
@@ -145,7 +145,7 @@ nav .nav-container2 .navul::-webkit-scrollbar-button {
 
 .custom-navbar #right-arrow {
   background-color: transparent;
-  background-image: url("/desafio-medium-final/images/icon-right-arrow.svg");
+  background-image: url("/images/icon-right-arrow.svg");
   width: 30px;
   height: 30px;
 }
@@ -193,8 +193,4 @@ nav .nav-container2 .navul::-webkit-scrollbar-button {
 #new-network-cover {
   background-color: #D7EEEE;
 }
-<<<<<<< HEAD
 /*# sourceMappingURL=style.css.map */
-=======
-/*# sourceMappingURL=style.css.map */
->>>>>>> 41429bc0a6d9b62ef0a1d0bdb34ce0faefa2be8a
