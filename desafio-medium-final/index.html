@@ -126,9 +126,11 @@
                                         <div class="column my-1">
                                             <div class="form-group">
                                                 <label for="mediumUser">Autor</label>
-                                                <input type="text" class="form-control" id="mediumAvatar" placeholder="Pegue una URL con su imagen">
+                                                <figcaption class="figure-caption" for="mediumUser">Nombre y Apellido</figcaption>
+                                                <input type="text" class="form-control" id="mediumUser">
                                                 <br>
-                                                <input type="text" class="form-control" id="mediumUser" placeholder="Ingrese su nombre y apellido">
+                                                <figcaption class="figure-caption" for="#mediumAvatar">Pegue una URL con su imagen</figcaption>
+                                                <input type="text" class="form-control" id="mediumAvatar" placeholder="https://">
                                             </div>
                                         </div>
                                         <div class="column my-1">
@@ -223,7 +225,7 @@
             <!-- LEFT COLUMN > FEATURED ARTICLE -->
             <div class="col-12 col-md-6 col-lg-5 feature-article mb-3">
                 <div class="card" style="border: none">
-                    <img src="https://picsum.photos/seed/picsum/200/300" height="150px" class="card-img-top">
+                    <img src="${cover}" class="card-img-top" alt="${title}" height="150px">
                     <div class="card-body" style="margin-left: 50px;"> 
                         <h4 class="card-title mt-1 mb-1" id="card-title-h4">${title}</h4>
                         <p class="card-text" style="color:#757575;">${summary}</p>
@@ -250,7 +252,7 @@
             <div class="col-12 col-md-6 col-lg-4">
                 <ul class="list-unstyled">
                     <li class="media" style="margin-bottom: inherit;">
-                        <img src="https://picsum.photos/200" class="mr-3" style="width: 100px; height:100px;">
+                        <img src="${cover}" class="img-fluid mr-3" alt="${title}" width="100px" height="100px">
                         <div class="media-body">
                             <h6 class="card-title mt-1 mb-1" id="card-title-h6">${title}</h6>
                             <div>
@@ -270,7 +272,7 @@
                         </div>
                     </li>
                     <li class="media" style="margin-bottom: inherit;">
-                        <img src="https://picsum.photos/id/240/200" class="mr-3" style="width: 100px; height:100px;">
+                        <img src="${cover}" class="img-fluid mr-3" alt="${title}" width="100px" height="100px">
                         <div class="media-body">
                             <h6 class="card-title mt-1 mb-1" id="card-title-h6">${title}</h6>
                             <div>
@@ -290,7 +292,7 @@
                         </div>
                     </li>
                     <li class="media" style="margin-bottom: inherit;">
-                        <img src="https://picsum.photos/id/200/200" class="mr-3" style="width: 100px; height:100px;">
+                        <img src="${cover}" class="img-fluid mr-3" alt="${title}" width="100px" height="100px">
                         <div class="media-body">
                             <h6 class="card-title mt-1 mb-1" id="card-title-h6">${title}</h6>
                             <div>
@@ -314,7 +316,7 @@
             <!-- RIGHT COLUMN > EDITOR'S PICK ARTICLE -->
             <div class="col-12 col-md-3 d-none d-lg-block">
                 <div class="card" style="border: none">
-                    <img src="https://picsum.photos/200/300?grayscale" class="card-img-top" style="height: 150px;">
+                    <img src="${cover}" class="card-img-top" alt="${title}">
                     <div class="card-body" style="margin-left: -20px;">
                         <h4 class="card-title mt-1 mb-1" id="card-title-h4">${title}</h4>                        <p class="card-text" style="color:#757575;">${summary}</p>
                         <div class= "main-article-footer d-flex justify-content-between align-items-center">
@@ -377,7 +379,7 @@
                                 </div>        
                             </div>
                             <div class="article-thumbnail col-4">
-                                <img src="https://source.unsplash.com/random/150x150" class="img-fluid" alt="">
+                                <img src="${cover}" class="img-fluid" alt="${title}" width="150px" height="150px">
                             </div>
                         </div>
                     </li>
@@ -410,7 +412,7 @@
                                 </div>        
                             </div>
                             <div class="article-thumbnail col-4">
-                                <img src="https://source.unsplash.com/random/150x150" class="img-fluid" alt="">
+                                <img src="${cover}" class="img-fluid" alt="${title}" width="150px" height="150px">
                             </div>
                         </div>
                     </li>
@@ -443,7 +445,7 @@
                                 </div>        
                             </div>
                             <div class="article-thumbnail col-4">
-                                <img src="https://source.unsplash.com/random/150x150" class="img-fluid" alt="">
+                                <img src="${cover}" class="img-fluid" alt="${title}" width="150px" height="150px">
                             </div>
                         </div>
                     </li>
@@ -476,7 +478,7 @@
                                 </div>        
                             </div>
                             <div class="article-thumbnail col-4">
-                                <img src="https://source.unsplash.com/random/150x150    " class="img-fluid" alt="">
+                                <img src="${cover}" class="img-fluid" alt="${title}" width="150px" height="150px">
                             </div>
                         </div>
                     </li>

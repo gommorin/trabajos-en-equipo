@@ -13,6 +13,7 @@ buttonR.onclick = function () {
 };
 
 let authorsArray = []
+
 // FUNCIONES PARA GUARDAR AUTORES Y CONTINUAR
 
 const guardarAutor = () => {
@@ -56,9 +57,9 @@ const crearPost = () => {
             console.log( response )
             let authors = response;
             $("#modalPost").empty();
-            $("#modalForm").hide();
             for( postKey in authors ) {
                 let { title, summary, avatar, user, date, time, cover } = authors[postKey]
+                $("#modalForm").hide();
                 $("#modalPost").append(`
                 <div class="modal-dialog modal-xl">
                     <div class="modal-content" id="postContent">
