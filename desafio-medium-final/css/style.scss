@@ -112,37 +112,40 @@ nav{
     }
 }
 
-
+// MENU SCROLLBAR
 .custom-navbar{
-    .btn-primary.btn-right {
-        background-color: white;
-        background-image: url("/images/icon-right-arrow.svg");    
-        &:active{
-            background-color:white;
+    #left-arrow {
+        background-color:transparent;
+        background-image: url("/desafio-medium-final/images/icon-left-arrow.svg");
+        width: 30px;
+        height: 30px;
+        &:active {
+            background-color:transparent;
         }
     }
 
-    .btn-primary.btn-left {
-        background-color:white;
-        background-image: url("/images/icon-left-arrow.svg");     
-        &:active {
-            background-color:white;
+    #right-arrow {
+        background-color: transparent;
+        background-image: url("/desafio-medium-final/images/icon-right-arrow.svg");
+        width: 30px;
+        height: 30px;
+        &:active{
+            background-color:transparent;
         }
     }
    
     #box-wrapper {
-        
         margin:0;
         padding:0;
         list-style-type: none;
         display:flex;
-        flex-direction: row;        
+        align-items:center;
         overflow:auto;
         white-space:nowrap;
         scroll-behavior: smooth;
         li {
-            display: block;     
-            margin:0 0.8rem;
+            display: block;    
+            margin:0 0.7rem;
             padding:0;
             font-size: 14px;
             color:grey;
@@ -167,4 +170,4 @@ nav{
         }        
     }
 }
-  
+
