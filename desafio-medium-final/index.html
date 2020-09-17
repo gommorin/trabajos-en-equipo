@@ -223,11 +223,7 @@
             <!-- LEFT COLUMN > FEATURED ARTICLE -->
             <div class="col-12 col-md-6 col-lg-5 feature-article mb-3">
                 <div class="card" style="border: none">
-<<<<<<< HEAD
                     <img src="https://picsum.photos/seed/picsum/200/300" height="150px" class="card-img-top">
-=======
-                    <img src="https://picsum.photos/seed/picsum/200/300" height="150px" class="card-img-top" style="">
->>>>>>> 41429bc0a6d9b62ef0a1d0bdb34ce0faefa2be8a
                     <div class="card-body" style="margin-left: 50px;"> 
                         <h4 class="card-title mt-1 mb-1" id="card-title-h4">${title}</h4>
                         <p class="card-text" style="color:#757575;">${summary}</p>
@@ -348,9 +344,9 @@
         </div>
     </section>
     <!-- MAIN SECTION > INFINITE SCROLL ARTICLES AND ASIDES -->
-    <section class="container" id="article-list">
+    <section class="container px-0" id="article-list">
         <div class="row">
-            <div class="m-article col-12 col-md-7">
+            <div class="m-article col-12 col-md-8 pr-0">
                 <ul class="p-0 unlisted">
                     <li class="media mb-5">
                         <div class="media-body row d-flex justify-content-between align-items-start">
@@ -487,8 +483,8 @@
                 </ul>
             </div>
         <!-- ASIDE > NEWS FROM YOUR NETWORK AND POPULAR BLOCKS -->
-            <aside class="d-none d-md-block d-lg-block d-xl-block col-md-5 sticky-top">
-                <div class="card mb-3">
+            <aside class="d-none d-md-block d-lg-block d-xl-block col-md-4 sticky-top pl-0">
+                <div class="card mb-3 border-0">
                     <div id="new-network-cover" class="news-cover col-12 d-flex align-items-end pb-2 pt-4">
                         <div class="col-7 pl-1">
                             <h4>New from your network</h4>
@@ -578,117 +574,120 @@
                         </ul>
                     </div>
                 </div>
+                <!-- ASIDE > POPULAR ON MEDIUM -->
                 <div class="row">
                     <div class="col-12">
-                        <h4 class="col-11 offset-1 pl-4 pb-1 pt-4 mb-1">Popular on Medium</h4>
-                        <div class="col-11 offset-1">
-                            <hr>
-                            <ul class="p-0 unlisted pt-4 pb-4">
-                                <li class="media mb-4">
-                                    <div class="media-body row d-flex justify-content-between align-items-start">
-                                        <div class="popularity col-2 text-right pr-0 super-light-grey-text">
-                                            <h1 class="w-100">01</h1>
-                                        </div>
-                                        <div class="col-10 pr-0">
-                                            <div class="media-body">
-                                                <h6 class="card-title mb-1"id="card-title-h6">${title}</h6>
-                                                <div class="d-flex justify-content-center" id="card-footer">
-                                                    <div class="col-12 p-0">
-                                                        <div class="d-flex m-0" id="who">
-                                                            <p class="card-text mr-2" id="card-user"><a href="http://" style="text-decoration:none; color:black; font-weight:500">${user}</a></p>
-                                                        </div>
-                                                        <div class="d-flex justify-content-start align-items-center">
-                                                            <p class="card-text my-0 mr-2" id="card-date" style="color:gray; font-size:.9em">${date}</p>
-                                                            <p class="card-text my-0 mr-2" id="card-time" style="color:gray; font-size:.9em">${time} min</p>
+                        <div class="card mx-0 mt-4 border-0">
+                            <h4 class="col-12 pb-0">Popular on Medium</h4>
+                            <div class="col-12 mx-0">
+                                <hr class="my-0">
+                                <ul class="p-0 unlisted pt-4 pb-3">
+                                    <li class="media mb-4">
+                                        <div class="media-body row d-flex justify-content-between align-items-start">
+                                            <div class="col-2 popularity text-right p-0 super-light-grey-text">
+                                                <h1 class="w-100">01</h1>
+                                            </div>
+                                            <div class="col-10 pr-0">
+                                                <div class="media-body">
+                                                    <h6 class="card-title mb-1"id="card-title-h6">${title}</h6>
+                                                    <div class="d-flex justify-content-center" id="card-footer">
+                                                        <div class="col-12 p-0">
+                                                            <div class="d-flex m-0" id="who">
+                                                                <p class="card-text mr-2" id="card-user"><a href="http://" style="text-decoration:none; color:black; font-weight:500">${user}</a></p>
+                                                            </div>
+                                                            <div class="d-flex justify-content-start align-items-center">
+                                                                <p class="card-text my-0 mr-2" id="card-date" style="color:gray; font-size:.9em">${date}</p>
+                                                                <p class="card-text my-0 mr-2" id="card-time" style="color:gray; font-size:.9em">${time} min</p>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li class="media mb-4">
-                                    <div class="media-body row d-flex justify-content-between align-items-start">
-                                        <div class="popularity col-2 text-right pr-0 super-light-grey-text">
-                                            <h1 class="w-100">02</h1>
-                                        </div>
-                                        <div class="col-10 pr-0">
-                                            <div class="media-body">
-                                                <h6 class="card-title mb-1" id="card-title-h6">${title}</h6>
-                                                <div class="d-flex justify-content-center" id="card-footer">
-                                                    <div class="col-12 p-0">
-                                                        <div class="d-flex m-0" id="who">
-                                                            <p class="card-text mr-2" id="card-user"><a href="http://" style="text-decoration:none; color:black; font-weight:500">${user}</a></p>
-                                                        </div>
-                                                        <div class="d-flex justify-content-start align-items-center">
-                                                            <p class="card-text my-0 mr-2" id="card-date" style="color:gray; font-size:.9em">${date}</p>
-                                                            <p class="card-text my-0 mr-2" id="card-time" style="color:gray; font-size:.9em">${time} min</p>
+                                    </li>
+                                    <li class="media mb-4">
+                                        <div class="media-body row d-flex justify-content-between align-items-start">
+                                            <div class="col-2 popularity text-right p-0 super-light-grey-text">
+                                                <h1 class="w-100">02</h1>
+                                            </div>
+                                            <div class="col-10 pr-0">
+                                                <div class="media-body">
+                                                    <h6 class="card-title mb-1"id="card-title-h6">${title}</h6>
+                                                    <div class="d-flex justify-content-center" id="card-footer">
+                                                        <div class="col-12 p-0">
+                                                            <div class="d-flex m-0" id="who">
+                                                                <p class="card-text mr-2" id="card-user"><a href="http://" style="text-decoration:none; color:black; font-weight:500">${user}</a></p>
+                                                            </div>
+                                                            <div class="d-flex justify-content-start align-items-center">
+                                                                <p class="card-text my-0 mr-2" id="card-date" style="color:gray; font-size:.9em">${date}</p>
+                                                                <p class="card-text my-0 mr-2" id="card-time" style="color:gray; font-size:.9em">${time} min</p>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li class="media mb-4">
-                                    <div class="media-body row d-flex justify-content-between align-items-start">
-                                        <div class="popularity col-2 text-right pr-0 super-light-grey-text">
-                                            <h1 class="w-100">03</h1>
-                                        </div>
-                                        <div class="col-10 pr-0">
-                                            <div class="media-body">
-                                                <h6 class="card-title mb-1" id="card-title-h6">${title}</h6>
-                                                <div class="d-flex justify-content-center" id="card-footer">
-                                                    <div class="col-12 p-0">
-                                                        <div class="d-flex m-0" id="who">
-                                                            <p class="card-text mr-2" id="card-user"><a href="http://" style="text-decoration:none; color:black; font-weight:500">${user}</a></p>
-                                                        </div>
-                                                        <div class="d-flex justify-content-start align-items-center">
-                                                            <p class="card-text my-0 mr-2" id="card-date" style="color:gray; font-size:.9em">${date}</p>
-                                                            <p class="card-text my-0 mr-2" id="card-time" style="color:gray; font-size:.9em">${time} min</p>
+                                    </li>
+                                    <li class="media mb-4">
+                                        <div class="media-body row d-flex justify-content-between align-items-start">
+                                            <div class="col-2 popularity text-right p-0 super-light-grey-text">
+                                                <h1 class="w-100">03</h1>
+                                            </div>
+                                            <div class="col-10 pr-0">
+                                                <div class="media-body">
+                                                    <h6 class="card-title mb-1"id="card-title-h6">${title}</h6>
+                                                    <div class="d-flex justify-content-center" id="card-footer">
+                                                        <div class="col-12 p-0">
+                                                            <div class="d-flex m-0" id="who">
+                                                                <p class="card-text mr-2" id="card-user"><a href="http://" style="text-decoration:none; color:black; font-weight:500">${user}</a></p>
+                                                            </div>
+                                                            <div class="d-flex justify-content-start align-items-center">
+                                                                <p class="card-text my-0 mr-2" id="card-date" style="color:gray; font-size:.9em">${date}</p>
+                                                                <p class="card-text my-0 mr-2" id="card-time" style="color:gray; font-size:.9em">${time} min</p>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li class="media mb-4">
-                                    <div class="media-body row d-flex justify-content-between align-items-start">
-                                        <div class="popularity col-2 text-right pr-0 super-light-grey-text">
-                                            <h1 class="w-100">04</h1>
-                                        </div>
-                                        <div class="col-10 pr-0">
-                                            <div class="media-body">
-                                                <h6 class="card-title mb-1" id="card-title-h6">${title}</h6>
-                                                <div class="d-flex justify-content-center" id="card-footer">
-                                                    <div class="col-12 p-0">
-                                                        <div class="d-flex m-0" id="who">
-                                                            <p class="card-text mr-2" id="card-user"><a href="http://" style="text-decoration:none; color:black; font-weight:500">${user}</a></p>
-                                                        </div>
-                                                        <div class="d-flex justify-content-start align-items-center">
-                                                            <p class="card-text my-0 mr-2" id="card-date" style="color:gray; font-size:.9em">${date}</p>
-                                                            <p class="card-text my-0 mr-2" id="card-time" style="color:gray; font-size:.9em">${time} min</p>
+                                    </li>
+                                    <li class="media mb-4">
+                                        <div class="media-body row d-flex justify-content-between align-items-start">
+                                            <div class="col-2 popularity text-right p-0 super-light-grey-text">
+                                                <h1 class="w-100">04</h1>
+                                            </div>
+                                            <div class="col-10 pr-0">
+                                                <div class="media-body">
+                                                    <h6 class="card-title mb-1"id="card-title-h6">${title}</h6>
+                                                    <div class="d-flex justify-content-center" id="card-footer">
+                                                        <div class="col-12 p-0">
+                                                            <div class="d-flex m-0" id="who">
+                                                                <p class="card-text mr-2" id="card-user"><a href="http://" style="text-decoration:none; color:black; font-weight:500">${user}</a></p>
+                                                            </div>
+                                                            <div class="d-flex justify-content-start align-items-center">
+                                                                <p class="card-text my-0 mr-2" id="card-date" style="color:gray; font-size:.9em">${date}</p>
+                                                                <p class="card-text my-0 mr-2" id="card-time" style="color:gray; font-size:.9em">${time} min</p>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        <footer class="mt-4 border-top">
-                            <ul class="list-inline light-grey-text">
-                                <li class="list-inline-item">Help</li>
-                                <li class="list-inline-item">Status</li>
-                                <li class="list-inline-item">Writers</li>
-                                <li class="list-inline-item">Blog</li>
-                                <li class="list-inline-item">Careers</li>
-                                <li class="list-inline-item">Privacy</li>
-                                <li class="list-inline-item">Terms</li>
-                                <li class="list-inline-item">About</li>
-                            </ul>
-                        </footer>
+                                    </li>
+                                </ul>
+                            <footer class="mt-2 border-top">
+                                <ul class="list-inline light-grey-text">
+                                    <li class="list-inline-item">Help</li>
+                                    <li class="list-inline-item">Status</li>
+                                    <li class="list-inline-item">Writers</li>
+                                    <li class="list-inline-item">Blog</li>
+                                    <li class="list-inline-item">Careers</li>
+                                    <li class="list-inline-item">Privacy</li>
+                                    <li class="list-inline-item">Terms</li>
+                                    <li class="list-inline-item">About</li>
+                                </ul>
+                            </footer>
+                        </div>
                     </div>
                 </div>
             </aside>
