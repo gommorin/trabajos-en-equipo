@@ -37,7 +37,11 @@ const guardarAutor = () => {
                 console.log(response);
                 console.log("autor guardado");
                 authorsArray.push(author);
+<<<<<<< HEAD
                 crearPost();
+=======
+                obtenerAutor();
+>>>>>>> 41429bc0a6d9b62ef0a1d0bdb34ce0faefa2be8a
             },
             error: ( error ) => {
                 console.log(error);
@@ -48,7 +52,11 @@ const guardarAutor = () => {
 
 // ESTA ES LA SOLUCION QUE LUCHO HIZO
 
+<<<<<<< HEAD
 const crearPost = () => {
+=======
+const obtenerAutor = () => {
+>>>>>>> 41429bc0a6d9b62ef0a1d0bdb34ce0faefa2be8a
     $.ajax({ 
         url:`https://ajaxclass9g.firebaseio.com/bell/medium/posts/.json`,
         method:"GET",
@@ -89,7 +97,11 @@ const crearPost = () => {
                                 </div>
                             </div>
                             <div class="modal-footer">
+<<<<<<< HEAD
                                 <button type="button" class="btn btn-secondary btn-delete" style="line-height:1.15; font-size:14px;font-family: source sans pro, sans-serif;font-weight: 400" height="65px" data-dismiss="modal" data-post-key=${llave}>Cancelar</button>
+=======
+                                <button type="button" class="btn btn-secondary" style="line-height:1.15; font-size:14px;font-family: source sans pro, sans-serif;font-weight: 400" height="65px" data-dismiss="modal" data-post-key=${postKey}>Cancelar</button>
+>>>>>>> 41429bc0a6d9b62ef0a1d0bdb34ce0faefa2be8a
                                 <button type="button" id="post-modal-btn" class="btn btn-dark" style="line-height:1.15; font-size:14px;font-family: source sans pro, sans-serif;font-weight: 400" height="65px" data-toggle="modal" data-target="#modalPost" data-whatever-again="modalPost">Publica</button>
                             </div>
                         </div>
@@ -103,7 +115,11 @@ const crearPost = () => {
                         method:"DELETE", 
                         success: ( response ) => {
                             console.log(response)
+<<<<<<< HEAD
                             crearPost();
+=======
+                            obtenerAutor();
+>>>>>>> 41429bc0a6d9b62ef0a1d0bdb34ce0faefa2be8a
                         },
                         error: ( error ) => {
                             console.log(error)
@@ -116,7 +132,11 @@ const crearPost = () => {
 }
 
 $('#postButton').on("click", guardarAutor)
+<<<<<<< HEAD
 crearPost()
+=======
+obtenerAutor()
+>>>>>>> 41429bc0a6d9b62ef0a1d0bdb34ce0faefa2be8a
 
 // ---------------------------------------
 
@@ -184,4 +204,8 @@ const deleteAllPosts = () => {
     })
 }
 
+<<<<<<< HEAD
 */
+=======
+*/
+>>>>>>> 41429bc0a6d9b62ef0a1d0bdb34ce0faefa2be8a
