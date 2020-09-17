@@ -16,6 +16,9 @@ function obtainingArticle() {
             for (llave in personajes) {
                 console.log(personajes[llave]);
                 let {bio, birthDate, country, gender, name, picture } = personajes[llave];
+                if (personajes[llave].gender ==="male"){
+
+                    
                 $("#popular-article-one").append(`
                     <div class="card" style="border: none">
                     <img src= ${picture} class="card-img-top" style="height: 150px;">
@@ -43,6 +46,7 @@ function obtainingArticle() {
                     </div>    
                 </div>
                     `);
+                }
             }
         }
     });
