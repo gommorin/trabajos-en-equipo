@@ -112,6 +112,14 @@ nav{
     }
 }
 
+/*
+@media only screen and (max-width:768px){
+    #upgradeBtn{
+        display:none;
+    }
+}
+*/
+
 // MENU SCROLLBAR
 .custom-navbar{
     #left-arrow {
@@ -169,4 +177,8 @@ nav{
             display:none;
         }        
     }
+}
+
+#new-network-cover {
+    background-color: #D7EEEE;
 }
