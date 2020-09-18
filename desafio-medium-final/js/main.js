@@ -30,9 +30,6 @@ const getMetaData = () => {
     console.log(postObject)
     $("#coverPreview").attr("src",postObject.cover)
     $("#cAvatar").attr("src",postObject.avatar)
-    $("#cDate").attr("placeholder",postObject.date)
-    $("#cTime").attr("placeholder",postObject.time)
-    $("#cPopularity").attr("placeholder",postObject.popular)
     toggleForms()
 }
 
