@@ -112,7 +112,6 @@ const crearPost = () => {
             for( postKey in authors ) {
                 let { title, summary, avatar, user, date, time, cover } = authors[postKey]
                 $("#modalPost").append(`
-
                 `)
                 
 
