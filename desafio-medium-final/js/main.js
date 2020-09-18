@@ -17,8 +17,6 @@ buttonR.onclick = function () {
 
 let postObject = {};
 
-$("#postModal").modal("show")
-
 const toggleForms = () => {
     $("#postModal form").toggleClass("d-none")
     $("#postModal .btn").toggleClass("d-none")
@@ -32,9 +30,9 @@ const getMetaData = () => {
     console.log(postObject)
     $("#coverPreview").attr("src",postObject.cover)
     $("#cAvatar").attr("src",postObject.avatar)
-    $("#cDate").attr("value",postObject.date)
-    $("#cTime").attr("value",postObject.time)
-    $("#cPopularity").attr("value",postObject.popular)
+    $("#cDate").attr("placeholder",postObject.date)
+    $("#cTime").attr("placeholder",postObject.time)
+    $("#cPopularity").attr("placeholder",postObject.popular)
     toggleForms()
 }
 
