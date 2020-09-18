@@ -1,4 +1,5 @@
 let postObject = {};
+
 $("#formModal").modal("show")
 
 const toggleForms = () => {
