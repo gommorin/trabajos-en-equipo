@@ -134,7 +134,7 @@ nav .nav-container2 .navul::-webkit-scrollbar-button {
 */
 .custom-navbar #left-arrow {
   background-color: transparent;
-  background-image: url("/images/icon-left-arrow.svg");
+  background-image: url("/desafio-medium-final/images/icon-left-arrow.svg");
   width: 30px;
   height: 30px;
 }
