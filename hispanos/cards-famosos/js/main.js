@@ -92,9 +92,6 @@ const obtenerPersonajes = () => {
                     </div>
                 `)
                 $(".btn-delete").click(( event )=>{
-                    // let llave = event.target.dataset.llavePersonaje
-                    // Recordatorio: event es un objeto que contiene todos los datdos del evento que estamos escuchando
-                    // event.target indica el elemento específico al que le sucedio el evento
                     let llave = $(event.target).data("llave-personaje")
                     $.ajax({
                         url: `https://ajaxclass9g.firebaseio.com/eddy-lucho/characters/${llave}.json`,
