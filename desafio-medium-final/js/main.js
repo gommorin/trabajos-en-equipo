@@ -53,3 +53,6 @@ const getPostData = () => {
 
 $("#nextButton").click(getMetaData)
 $("#saveButton").click(getPostData)
+
+// FUNCIONES PARA RELLENAR CADA SECCIÓN
+
