@@ -8,6 +8,18 @@ h1,h2,h3,h4,h5,h6 {
     font-weight: 400;
 }
 
+@media only screen and (max-width:680px){
+    #popular-one-body{
+        padding-left:0;
+    }
+}
+
+@media only screen and (min-width:681px){
+    #popular-one-body{
+        padding-left:40px;
+    }
+}
+
 /*Declaración de Variables de colores*/
 $darkest-grey: #1c1c1c;
 $light-grey: #757575;
@@ -112,14 +124,6 @@ nav{
     }
 }
 
-/*
-@media only screen and (max-width:768px){
-    #upgradeBtn{
-        display:none;
-    }
-}
-*/
-
 // MENU SCROLLBAR
 .custom-navbar{
     #left-arrow {
@@ -155,7 +159,7 @@ nav{
             display: block;    
             margin:0 0.7rem;
             padding:0;
-            font-size: 1em;
+            font-size: .9rem;
             color:grey;
             &:hover{
                 color:black;

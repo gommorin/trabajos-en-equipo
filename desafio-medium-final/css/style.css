@@ -9,6 +9,18 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 
+@media only screen and (max-width: 680px) {
+  #popular-one-body {
+    padding-left: 0;
+  }
+}
+
+@media only screen and (min-width: 681px) {
+  #popular-one-body {
+    padding-left: 40px;
+  }
+}
+
 /*Declaración de Variables de colores*/
 .darkest-grey-text {
   color: #1c1c1c;
@@ -125,13 +137,6 @@ nav .nav-container2 .navul::-webkit-scrollbar-button {
   top: 50px;
 }
 
-/*
-@media only screen and (max-width:768px){
-    #upgradeBtn{
-        display:none;
-    }
-}
-*/
 .custom-navbar #left-arrow {
   background-color: transparent;
   background-image: url("/desafio-medium-final/images/icon-left-arrow.svg");
@@ -173,7 +178,7 @@ nav .nav-container2 .navul::-webkit-scrollbar-button {
   display: block;
   margin: 0 0.7rem;
   padding: 0;
-  font-size: 1em;
+  font-size: .9rem;
   color: grey;
 }
 

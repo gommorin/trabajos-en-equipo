@@ -97,8 +97,8 @@
                                 </div>
                                 <div class="column my-1">
                                     <div class="form-group">
-                                        <label for="mediumRanking">Del 1 al 100, ¿qué tan popular considera es el artículo?</label>
-                                        <input type="number" class="form-control" id="mediumRanking" placeholder="Por ejemplo, 72" data-apunta-a="ranking">
+                                        <label for="mediumRanking">¿Cuántos aplausos ha recibido el artículo?</label>
+                                        <input type="number" class="form-control" id="mediumRanking" placeholder="Por ejemplo: 100" data-apunta-a="ranking">
                                     </div>
                                 </div>
                                 <div class="column my-1">
@@ -125,9 +125,9 @@
                                             <div class="d-flex justify-content-between align-items-center mb-1">
                                                 <div class="d-flex justify-content-start align-items-center">
                                                     <img id="cAvatar" src="" class="rounded-circle dropdown-toggle mr-3" height="35px" type="button" alt="profile-avatar" id="dropdownAvatar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-apunta-a="card-avatar">
-                                                    <p class="card-text my-0 mr-2" id="cUser" data-apunta-a="card-user"><a href="http://" style="text-decoration:none; color:black; font-weight:500">`$(#mediumUser)`</a></p>
-                                                    <p class="card-text my-0 mr-3" id="cDate" style="color:gray" data-apunta-a="card-date">`$(#mediumDate)`</p>
-                                                    <p class="card-text my-0 mr-3" id="cTime" style="color:gray" data-apunta-a="card-time">`$(#mediumTime)`</p>
+                                                    <p class="card-text my-0 mr-2" id="cUser" data-apunta-a="card-user"><a href="http://" style="text-decoration:none; color:black; font-weight:500">`$(#mediumTitle)`</a></p>
+                                                    <p class="card-text my-0 mr-3" id="cDate" style="color:gray" data-apunta-a="card-date"></p>
+                                                    <p class="card-text my-0 mr-3" id="cTime" style="color:gray" data-apunta-a="card-time"></p>
                                                     <div class="my-0" id="cPopularity" style="color:gray" data-apunta-a="card-popularity">
                                                     </div>
                                                 </div>
@@ -185,23 +185,31 @@
                 </svg>
                 <button type="button" id="upgradeBtn" class="d-none d-md-block btn btn-outline-dark bg-transparent mx-3" style="line-height:1.15; font-size:14px;font-family: source sans pro, sans-serif;font-weight: 400" height="65px" data-toggle="modal" data-target="#postModal" data-whatever="modalFormulario">Upgrade</button>
                 <div class="dropdown">
-                    <img src="https://cdn-images-1.medium.com/fit/c/100/100/1*57gGZnKUklBmnHofm97fKQ.jpeg" class="rounded-circle dropdown-toggle mx-2" height="35px" type="button" alt="profile-avatar" id="dropdownAvatar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                      <button class="dropdown-item" type="button">New story</button>
-                      <button class="dropdown-item" type="button">Stories</button>
-                      <button class="dropdown-item" type="button">Series</button>
-                      <button class="dropdown-item" type="button">Stats</button>
-                      <button class="dropdown-item" type="button">Settings</button>
-                      <hr>
-                      <button class="dropdown-item" type="button">Reading List</button>
-                      <button class="dropdown-item" type="button">Publications</button>
-                      <button class="dropdown-item" type="button">Customize your interests</button>
-                      <button class="dropdown-item" type="button">Medium Partner Program</button>
-                      <hr>
-                      <button class="dropdown-item" type="button">Become a member</button>
-                      <button class="dropdown-item" type="button">Profile</button>
-                      <button class="dropdown-item" type="button">Help</button>
-                      <button class="dropdown-item" type="button">Sign Out</button>
+                    <img src="https://cdn-images-1.medium.com/fit/c/100/100/1*57gGZnKUklBmnHofm97fKQ.jpeg" class="rounded-circle dropdown-toggle mx-2" height="35px" type="button" alt="profile-avatar" id="dropdownAvatar" data-offset="10,20" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div class="dropdown-menu dropdown-menu-right p-4 shadow-sm border-0" aria-labelledby="dropdownAvatar">
+                        <div class="d-flex justify-content-start align-items-center py-2">
+                            <img src="https://cdn-images-1.medium.com/fit/c/100/100/1*57gGZnKUklBmnHofm97fKQ.jpeg" class="rounded-circle dropdown-toggle mx-2" height="45px" type="button">
+                            <div class="d-flex flex-column align-items-start justify-content-center">
+                                <caption><strong>Luis Gommorin</strong></caption>
+                                <caption class="text-muted">@gommorin</caption>
+                            </div>
+                        </div>
+                        <hr>
+                        <button class="dropdown-item" type="button">New story</button>
+                        <button class="dropdown-item" type="button">Stories</button>
+                        <button class="dropdown-item" type="button">Series</button>
+                        <button class="dropdown-item" type="button">Stats</button>
+                        <button class="dropdown-item" type="button">Settings</button>
+                        <hr>
+                        <button class="dropdown-item" type="button">Reading List</button>
+                        <button class="dropdown-item" type="button">Publications</button>
+                        <button class="dropdown-item" type="button">Customize your interests</button>
+                        <button class="dropdown-item" type="button">Medium Partner Program</button>
+                        <hr>
+                        <button class="dropdown-item" type="button" style="color:#018F69">Become a member</button>
+                        <button class="dropdown-item" type="button">Profile</button>
+                        <button class="dropdown-item" type="button">Help</button>
+                        <button class="dropdown-item" type="button">Sign Out</button>
                     </div>
                 </div>
             </div>
@@ -213,7 +221,7 @@
         <div class="row my-4">
             <div class="col-12 d-block">   
                 <div class="custom-navbar d-flex flex-row px-2 align-items-start">
-                    <button id="left-arrow" class="btn border-0 btn-left p-0" type="button"></button> 
+                    <button id="left-arrow" class="btn border-0 btn-left pr-1" type="button"></button> 
                     <ul id="box-wrapper">
                         <li>HOME</li>
                         <li>POPULAR</li>
@@ -230,130 +238,26 @@
                         <li>HEATED</li>
                         <li>MORE</li>
                     </ul>
-                    <button id="right-arrow" class="btn border-0 btn-right p-0" type="button"></button> 
+                    <button id="right-arrow" class="btn border-0 btn-right pl-1" type="button"></button> 
                 </div>
             </div>
         </div>
     </div>
-
     <!-- TOP SECTION > FEATURED ARTICLES AND EDITOR'S PICK -->
     <section class="container" id="main-articles">
         <div class="row">
             <!-- LEFT COLUMN > FEATURED ARTICLE -->
-            <div class="col-12 col-md-6 col-lg-5 feature-article mb-3">
-                <div class="card" style="border: none">
-                    <img src="${cover}" class="card-img-top" alt="${title}" height="150px">
-                    <div class="card-body" style="margin-left: 50px;"> 
-                        <h4 class="card-title mt-1 mb-1" id="card-title-h4">${title}</h4>
-                        <p class="card-text" style="color:#757575;">${summary}</p>
-                        <div class= "main-article-footer d-flex justify-content-between align-items-center">
-                            <div>
-                                <p class="card-text my-0 mr-2" id="card-user"><a href="http://" style="text-decoration:none; color:black; font-weight:500">${user}</a></p>
-                                <div>
-                                    <div class="d-flex justify-content-start align-items-center">
-                                        <p class="card-text my-0 mr-2" id="card-date" style="color:gray; font-size:.9em">${date}</p>
-                                        <p class="card-text my-0 mr-2" id="card-time" style="color:gray; font-size:.9em">${time} min</p>
-                                        <div class="my-0" id="popularity" style="font-size:.7em; color:gray"> ★
-                                        </div>
-                                    </div>    
-                                </div>
-                             </div>
-                             <div>
-                                <span class="svgIcon svgIcon--moreFilled svgIcon--25px is-flushRight"><svg class="svgIcon-use" width="25" height="25"><path d="M5 12.5c0 .552.195 1.023.586 1.414.39.39.862.586 1.414.586.552 0 1.023-.195 1.414-.586.39-.39.586-.862.586-1.414 0-.552-.195-1.023-.586-1.414A1.927 1.927 0 007 10.5c-.552 0-1.023.195-1.414.586-.39.39-.586.862-.586 1.414zm5.617 0c0 .552.196 1.023.586 1.414.391.39.863.586 1.414.586.552 0 1.023-.195 1.414-.586.39-.39.586-.862.586-1.414 0-.552-.195-1.023-.586-1.414a1.927 1.927 0 00-1.414-.586c-.551 0-1.023.195-1.414.586-.39.39-.586.862-.586 1.414zm5.6 0c0 .552.195 1.023.586 1.414.39.39.868.586 1.432.586.551 0 1.023-.195 1.413-.586.391-.39.587-.862.587-1.414 0-.552-.196-1.023-.587-1.414a1.927 1.927 0 00-1.413-.586c-.565 0-1.042.195-1.432.586-.39.39-.586.862-.587 1.414z" fill-rule="evenodd"></path></svg></span>
-                             </div>
-                       </div>
-                    </div>
-                </div>
+            <div class="col-12 col-md-6 col-lg-5 feature-article" id="popular-article-one">
             </div>
+       
+
             <!-- MID COLUMN > 3 FEATURED ARTICLES -->
-            <div class="col-12 col-md-6 col-lg-4">
-                <ul class="list-unstyled">
-                    <li class="media" style="margin-bottom: inherit;">
-                        <img src="${cover}" class="img-fluid mr-3" alt="${title}" width="100px" height="100px">
-                        <div class="media-body">
-                            <h6 class="card-title mt-1 mb-1" id="card-title-h6">${title}</h6>
-                            <div>
-                                <p class="card-text my-0 mr-2" id="card-user"><a href="http://" style="text-decoration:none; color:black; font-weight:400; font-size:.9em">${user}</a></p>
-                                <div class="d-flex justify-content-between align-items-center mb-1">
-                                    <div class="d-flex justify-content-start align-items-center">
-                                        <p class="card-text my-0 mr-2" id="card-date" style="color:gray; font-size:.9em">${date}</p>
-                                        <p class="card-text my-0 mr-2" id="card-time" style="color:gray; font-size:.9em">${time} min</p>
-                                        <div class="my-0" id="popularity" style="font-size:.7em; color:gray"> ★
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <svg class="svgIcon-use" width="25" height="25"><path d="M5 12.5c0 .552.195 1.023.586 1.414.39.39.862.586 1.414.586.552 0 1.023-.195 1.414-.586.39-.39.586-.862.586-1.414 0-.552-.195-1.023-.586-1.414A1.927 1.927 0 007 10.5c-.552 0-1.023.195-1.414.586-.39.39-.586.862-.586 1.414zm5.617 0c0 .552.196 1.023.586 1.414.391.39.863.586 1.414.586.552 0 1.023-.195 1.414-.586.39-.39.586-.862.586-1.414 0-.552-.195-1.023-.586-1.414a1.927 1.927 0 00-1.414-.586c-.551 0-1.023.195-1.414.586-.39.39-.586.862-.586 1.414zm5.6 0c0 .552.195 1.023.586 1.414.39.39.868.586 1.432.586.551 0 1.023-.195 1.413-.586.391-.39.587-.862.587-1.414 0-.552-.196-1.023-.587-1.414a1.927 1.927 0 00-1.413-.586c-.565 0-1.042.195-1.432.586-.39.39-.586.862-.587 1.414z" fill-rule="evenodd"></path></svg>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="media" style="margin-bottom: inherit;">
-                        <img src="${cover}" class="img-fluid mr-3" alt="${title}" width="100px" height="100px">
-                        <div class="media-body">
-                            <h6 class="card-title mt-1 mb-1" id="card-title-h6">${title}</h6>
-                            <div>
-                                <p class="card-text my-0 mr-2" id="card-user"><a href="http://" style="text-decoration:none; color:black; font-weight:400; font-size:.9em">${user}</a></p>
-                                <div class="d-flex justify-content-between align-items-center mb-1">
-                                    <div class="d-flex justify-content-start align-items-center">
-                                        <p class="card-text my-0 mr-2" id="card-date" style="color:gray; font-size:.9em">${date}</p>
-                                        <p class="card-text my-0 mr-2" id="card-time" style="color:gray; font-size:.9em">${time} min</p>
-                                        <div class="my-0" id="popularity" style="font-size:.7em; color:gray"> ★
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <svg class="svgIcon-use" width="25" height="25"><path d="M5 12.5c0 .552.195 1.023.586 1.414.39.39.862.586 1.414.586.552 0 1.023-.195 1.414-.586.39-.39.586-.862.586-1.414 0-.552-.195-1.023-.586-1.414A1.927 1.927 0 007 10.5c-.552 0-1.023.195-1.414.586-.39.39-.586.862-.586 1.414zm5.617 0c0 .552.196 1.023.586 1.414.391.39.863.586 1.414.586.552 0 1.023-.195 1.414-.586.39-.39.586-.862.586-1.414 0-.552-.195-1.023-.586-1.414a1.927 1.927 0 00-1.414-.586c-.551 0-1.023.195-1.414.586-.39.39-.586.862-.586 1.414zm5.6 0c0 .552.195 1.023.586 1.414.39.39.868.586 1.432.586.551 0 1.023-.195 1.413-.586.391-.39.587-.862.587-1.414 0-.552-.196-1.023-.587-1.414a1.927 1.927 0 00-1.413-.586c-.565 0-1.042.195-1.432.586-.39.39-.586.862-.587 1.414z" fill-rule="evenodd"></path></svg>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="media" style="margin-bottom: inherit;">
-                        <img src="${cover}" class="img-fluid mr-3" alt="${title}" width="100px" height="100px">
-                        <div class="media-body">
-                            <h6 class="card-title mt-1 mb-1" id="card-title-h6">${title}</h6>
-                            <div>
-                                <p class="card-text my-0 mr-2" id="card-user"><a href="http://" style="text-decoration:none; color:black; font-weight:400; font-size:.9em">${user}</a></p>
-                                <div class="d-flex justify-content-between align-items-center mb-1">
-                                    <div class="d-flex justify-content-start align-items-center">
-                                        <p class="card-text my-0 mr-2" id="card-date" style="color:gray; font-size:.9em">${date}</p>
-                                        <p class="card-text my-0 mr-2" id="card-time" style="color:gray; font-size:.9em">${time} min</p>
-                                        <div class="my-0" id="popularity" style="font-size:.7em; color:gray"> ★
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <svg class="svgIcon-use" width="25" height="25"><path d="M5 12.5c0 .552.195 1.023.586 1.414.39.39.862.586 1.414.586.552 0 1.023-.195 1.414-.586.39-.39.586-.862.586-1.414 0-.552-.195-1.023-.586-1.414A1.927 1.927 0 007 10.5c-.552 0-1.023.195-1.414.586-.39.39-.586.862-.586 1.414zm5.617 0c0 .552.196 1.023.586 1.414.391.39.863.586 1.414.586.552 0 1.023-.195 1.414-.586.39-.39.586-.862.586-1.414 0-.552-.195-1.023-.586-1.414a1.927 1.927 0 00-1.414-.586c-.551 0-1.023.195-1.414.586-.39.39-.586.862-.586 1.414zm5.6 0c0 .552.195 1.023.586 1.414.39.39.868.586 1.432.586.551 0 1.023-.195 1.413-.586.391-.39.587-.862.587-1.414 0-.552-.196-1.023-.587-1.414a1.927 1.927 0 00-1.413-.586c-.565 0-1.042.195-1.432.586-.39.39-.586.862-.587 1.414z" fill-rule="evenodd"></path></svg>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+            <div class="col-12 col-md-6 col-lg-4" id= "popular-article-3">  
             </div>
+
             <!-- RIGHT COLUMN > EDITOR'S PICK ARTICLE -->
-            <div class="col-12 col-md-3 d-none d-lg-block">
-                <div class="card" style="border: none">
-                    <img src="${cover}" class="card-img-top" alt="${title}">
-                    <div class="card-body" style="margin-left: -20px;">
-                        <h4 class="card-title mt-1 mb-1" id="card-title-h4">${title}</h4>                        <p class="card-text" style="color:#757575;">${summary}</p>
-                        <div class= "main-article-footer d-flex justify-content-between align-items-center">
-                            <div>
-                                <p class="card-text my-0 mr-2" id="card-user"><a href="http://" style="text-decoration:none; color:black; font-weight:500">${user}</a></p>
-                                <div>
-                                    <div class="d-flex justify-content-start align-items-center">
-                                        <p class="card-text my-0 mr-2" id="card-date" style="color:gray; font-size:.9em">${date}</p>
-                                        <p class="card-text my-0 mr-2" id="card-time" style="color:gray; font-size:.9em">${time} min</p>
-                                        <div class="my-0" id="popularity" style="font-size:.7em; color:gray"> ★
-                                        </div>
-                                    </div>    
-                                </div>
-                            </div>
-                            <div>
-                                <span class="svgIcon svgIcon--moreFilled svgIcon--25px is-flushRight"><svg class="svgIcon-use" width="25" height="25"><path d="M5 12.5c0 .552.195 1.023.586 1.414.39.39.862.586 1.414.586.552 0 1.023-.195 1.414-.586.39-.39.586-.862.586-1.414 0-.552-.195-1.023-.586-1.414A1.927 1.927 0 007 10.5c-.552 0-1.023.195-1.414.586-.39.39-.586.862-.586 1.414zm5.617 0c0 .552.196 1.023.586 1.414.391.39.863.586 1.414.586.552 0 1.023-.195 1.414-.586.39-.39.586-.862.586-1.414 0-.552-.195-1.023-.586-1.414a1.927 1.927 0 00-1.414-.586c-.551 0-1.023.195-1.414.586-.39.39-.586.862-.586 1.414zm5.6 0c0 .552.195 1.023.586 1.414.39.39.868.586 1.432.586.551 0 1.023-.195 1.413-.586.391-.39.587-.862.587-1.414 0-.552-.196-1.023-.587-1.414a1.927 1.927 0 00-1.413-.586c-.565 0-1.042.195-1.432.586-.39.39-.586.862-.587 1.414z" fill-rule="evenodd"></path></svg></span>
-                            </div>
-                       </div>
-                    </div>
-                </div>
+            <div class="col-12 col-md-3 d-none d-lg-block" id = "editor-article">
+                
             </div>
         </div>
         <div class="row d-flex justify-content-md-end justify-content-start border-bottom mb-5 pb-3 cierre" style="margin-right: 50px; margin-left: 5px;" >
@@ -361,149 +265,16 @@
                 <a href="#" style="color:#018F69;">SEE EDITOR´S PICKS ></a>
             </div>
         </div>
-    </section>
-    <!-- MAIN SECTION > INFINITE SCROLL ARTICLES AND ASIDES -->
-    <section class="container px-0" id="article-list">
-        <div class="row">
-            <div class="m-article col-12 col-md-8 pr-0">
-                <ul class="p-0 unlisted">
-                    <li class="media mb-5">
-                        <div class="media-body row d-flex justify-content-between align-items-start">
-                            <div class="col-8 pr-0">
-                                <p class="origin-tag text-uppercase light-grey-text" style="font-size:.9em; margin-bottom:.4em">${category}</p>
-                                <h5 class="card-title mt-1 mb-1" id="card-title">${title}</h5>
-                                <p class="card-text" style="color:#757575;">${summary}</p>
-                                <div>
-                                    <p class="card-text my-0 mr-2" id="card-user"><a href="http://" style="text-decoration:none; color:black; font-weight:400; font-size:.9em">${user}</a></p>
-                                    <div class="d-flex justify-content-between align-items-center mb-1">
-                                        <div class="d-flex justify-content-start align-items-center">
-                                            <p class="card-text my-0 mr-2" id="card-date" style="color:gray; font-size:.9em">${date}</p>
-                                            <p class="card-text my-0 mr-2" id="card-time" style="color:gray; font-size:.9em">${time} min</p>
-                                            <div class="my-0" id="popularity" style="font-size:.7em; color:gray"> ★
-                                            </div>
-                                        </div>
-                                        <div class="active-state d-flex justify-content-end align-items-center">
-                                            <span class="svgIcon ">
-                                                <svg class="svgIcon-use svg-fill-light-grey" width="25" height="25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 00.706.03L12.5 16.85l5.662 4.126a.508.508 0 00.708-.03.5.5 0 00.118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 00-.676 0z" fill-rule="evenodd"></path>
-                                                </svg>
-                                            </span>
-                                            <span class="svgIcon svg-fill-light-grey">
-                                                <svg class="svgIcon-use" width="25" height="25"><path d="M5 12.5c0 .552.195 1.023.586 1.414.39.39.862.586 1.414.586.552 0 1.023-.195 1.414-.586.39-.39.586-.862.586-1.414 0-.552-.195-1.023-.586-1.414A1.927 1.927 0 007 10.5c-.552 0-1.023.195-1.414.586-.39.39-.586.862-.586 1.414zm5.617 0c0 .552.196 1.023.586 1.414.391.39.863.586 1.414.586.552 0 1.023-.195 1.414-.586.39-.39.586-.862.586-1.414 0-.552-.195-1.023-.586-1.414a1.927 1.927 0 00-1.414-.586c-.551 0-1.023.195-1.414.586-.39.39-.586.862-.586 1.414zm5.6 0c0 .552.195 1.023.586 1.414.39.39.868.586 1.432.586.551 0 1.023-.195 1.413-.586.391-.39.587-.862.587-1.414 0-.552-.196-1.023-.587-1.414a1.927 1.927 0 00-1.413-.586c-.565 0-1.042.195-1.432.586-.39.39-.586.862-.587 1.414z" fill-rule="evenodd"></path>
-                                                </svg>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>        
-                            </div>
-                            <div class="article-thumbnail col-4">
-                                <img src="${cover}" class="img-fluid" alt="${title}" width="150px" height="150px">
-                            </div>
-                        </div>
-                    </li>
-                    <li class="media mb-5">
-                        <div class="media-body row d-flex justify-content-between align-items-start">
-                            <div class="col-8 pr-0">
-                                <p class="origin-tag text-uppercase light-grey-text" style="font-size:.9em; margin-bottom:.4em">${category}</p>
-                                <h5 class="card-title mt-1 mb-1" id="card-title-h5">${title}</h5>
-                                <p class="card-text" style="color:#757575;">${summary}</p>
-                                <div>
-                                    <p class="card-text my-0 mr-2" id="card-user"><a href="http://" style="text-decoration:none; color:black; font-weight:400; font-size:.9em">${user}</a></p>
-                                    <div class="d-flex justify-content-between align-items-center mb-1">
-                                        <div class="d-flex justify-content-start align-items-center">
-                                            <p class="card-text my-0 mr-2" id="card-date" style="color:gray; font-size:.9em">${date}</p>
-                                            <p class="card-text my-0 mr-2" id="card-time" style="color:gray; font-size:.9em">${time} min</p>
-                                            <div class="my-0" id="popularity" style="font-size:.7em; color:gray"> ★
-                                            </div>
-                                        </div>
-                                        <div class="active-state d-flex justify-content-end align-items-center">
-                                            <span class="svgIcon ">
-                                                <svg class="svgIcon-use svg-fill-light-grey" width="25" height="25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 00.706.03L12.5 16.85l5.662 4.126a.508.508 0 00.708-.03.5.5 0 00.118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 00-.676 0z" fill-rule="evenodd"></path>
-                                                </svg>
-                                            </span>
-                                            <span class="svgIcon svg-fill-light-grey">
-                                                <svg class="svgIcon-use" width="25" height="25"><path d="M5 12.5c0 .552.195 1.023.586 1.414.39.39.862.586 1.414.586.552 0 1.023-.195 1.414-.586.39-.39.586-.862.586-1.414 0-.552-.195-1.023-.586-1.414A1.927 1.927 0 007 10.5c-.552 0-1.023.195-1.414.586-.39.39-.586.862-.586 1.414zm5.617 0c0 .552.196 1.023.586 1.414.391.39.863.586 1.414.586.552 0 1.023-.195 1.414-.586.39-.39.586-.862.586-1.414 0-.552-.195-1.023-.586-1.414a1.927 1.927 0 00-1.414-.586c-.551 0-1.023.195-1.414.586-.39.39-.586.862-.586 1.414zm5.6 0c0 .552.195 1.023.586 1.414.39.39.868.586 1.432.586.551 0 1.023-.195 1.413-.586.391-.39.587-.862.587-1.414 0-.552-.196-1.023-.587-1.414a1.927 1.927 0 00-1.413-.586c-.565 0-1.042.195-1.432.586-.39.39-.586.862-.587 1.414z" fill-rule="evenodd"></path>
-                                                </svg>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>        
-                            </div>
-                            <div class="article-thumbnail col-4">
-                                <img src="${cover}" class="img-fluid" alt="${title}" width="150px" height="150px">
-                            </div>
-                        </div>
-                    </li>
-                    <li class="media mb-5">
-                        <div class="media-body row d-flex justify-content-between align-items-start">
-                            <div class="col-8 pr-0">
-                                <p class="origin-tag text-uppercase light-grey-text" style="font-size:.9em; margin-bottom:.4em">${category}</p>
-                                <h5 class="card-title mt-1 mb-1" id="card-title-h5">${title}</h5>
-                                <p class="card-text" style="color:#757575;">${summary}</p>
-                                <div>
-                                    <p class="card-text my-0 mr-2" id="card-user"><a href="http://" style="text-decoration:none; color:black; font-weight:400; font-size:.9em">${user}</a></p>
-                                    <div class="d-flex justify-content-between align-items-center mb-1">
-                                        <div class="d-flex justify-content-start align-items-center">
-                                            <p class="card-text my-0 mr-2" id="card-date" style="color:gray; font-size:.9em">${date}</p>
-                                            <p class="card-text my-0 mr-2" id="card-time" style="color:gray; font-size:.9em">${time} min</p>
-                                            <div class="my-0" id="popularity" style="font-size:.7em; color:gray"> ★
-                                            </div>
-                                        </div>
-                                        <div class="active-state d-flex justify-content-end align-items-center">
-                                            <span class="svgIcon ">
-                                                <svg class="svgIcon-use svg-fill-light-grey" width="25" height="25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 00.706.03L12.5 16.85l5.662 4.126a.508.508 0 00.708-.03.5.5 0 00.118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 00-.676 0z" fill-rule="evenodd"></path>
-                                                </svg>
-                                            </span>
-                                            <span class="svgIcon svg-fill-light-grey">
-                                                <svg class="svgIcon-use" width="25" height="25"><path d="M5 12.5c0 .552.195 1.023.586 1.414.39.39.862.586 1.414.586.552 0 1.023-.195 1.414-.586.39-.39.586-.862.586-1.414 0-.552-.195-1.023-.586-1.414A1.927 1.927 0 007 10.5c-.552 0-1.023.195-1.414.586-.39.39-.586.862-.586 1.414zm5.617 0c0 .552.196 1.023.586 1.414.391.39.863.586 1.414.586.552 0 1.023-.195 1.414-.586.39-.39.586-.862.586-1.414 0-.552-.195-1.023-.586-1.414a1.927 1.927 0 00-1.414-.586c-.551 0-1.023.195-1.414.586-.39.39-.586.862-.586 1.414zm5.6 0c0 .552.195 1.023.586 1.414.39.39.868.586 1.432.586.551 0 1.023-.195 1.413-.586.391-.39.587-.862.587-1.414 0-.552-.196-1.023-.587-1.414a1.927 1.927 0 00-1.413-.586c-.565 0-1.042.195-1.432.586-.39.39-.586.862-.587 1.414z" fill-rule="evenodd"></path>
-                                                </svg>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>        
-                            </div>
-                            <div class="article-thumbnail col-4">
-                                <img src="${cover}" class="img-fluid" alt="${title}" width="150px" height="150px">
-                            </div>
-                        </div>
-                    </li>
-                    <li class="media mb-5">
-                        <div class="media-body row d-flex justify-content-between align-items-start">
-                            <div class="col-8 pr-0">
-                                <p class="origin-tag text-uppercase light-grey-text" style="font-size:.9em; margin-bottom:.4em">${category}</p>
-                                <h5 class="card-title mt-1 mb-1" id="card-title-h5">${title}</h5>
-                                <p class="card-text" style="color:#757575;">${summary}</p>
-                                <div>
-                                    <p class="card-text my-0 mr-2" id="card-user"><a href="http://" style="text-decoration:none; color:black; font-weight:400; font-size:.9em">${user}</a></p>
-                                    <div class="d-flex justify-content-between align-items-center mb-1">
-                                        <div class="d-flex justify-content-start align-items-center">
-                                            <p class="card-text my-0 mr-2" id="card-date" style="color:gray; font-size:.9em">${date}</p>
-                                            <p class="card-text my-0 mr-2" id="card-time" style="color:gray; font-size:.9em">${time} min</p>
-                                            <div class="my-0" id="popularity" style="font-size:.7em; color:gray"> ★
-                                            </div>
-                                        </div>
-                                        <div class="active-state d-flex justify-content-end align-items-center">
-                                            <span class="svgIcon ">
-                                                <svg class="svgIcon-use svg-fill-light-grey" width="25" height="25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 00.706.03L12.5 16.85l5.662 4.126a.508.508 0 00.708-.03.5.5 0 00.118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 00-.676 0z" fill-rule="evenodd"></path>
-                                                </svg>
-                                            </span>
-                                            <span class="svgIcon svg-fill-light-grey">
-                                                <svg class="svgIcon-use" width="25" height="25"><path d="M5 12.5c0 .552.195 1.023.586 1.414.39.39.862.586 1.414.586.552 0 1.023-.195 1.414-.586.39-.39.586-.862.586-1.414 0-.552-.195-1.023-.586-1.414A1.927 1.927 0 007 10.5c-.552 0-1.023.195-1.414.586-.39.39-.586.862-.586 1.414zm5.617 0c0 .552.196 1.023.586 1.414.391.39.863.586 1.414.586.552 0 1.023-.195 1.414-.586.39-.39.586-.862.586-1.414 0-.552-.195-1.023-.586-1.414a1.927 1.927 0 00-1.414-.586c-.551 0-1.023.195-1.414.586-.39.39-.586.862-.586 1.414zm5.6 0c0 .552.195 1.023.586 1.414.39.39.868.586 1.432.586.551 0 1.023-.195 1.413-.586.391-.39.587-.862.587-1.414 0-.552-.196-1.023-.587-1.414a1.927 1.927 0 00-1.413-.586c-.565 0-1.042.195-1.432.586-.39.39-.586.862-.587 1.414z" fill-rule="evenodd"></path>
-                                                </svg>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>        
-                            </div>
-                            <div class="article-thumbnail col-4">
-                                <img src="${cover}" class="img-fluid" alt="${title}" width="150px" height="150px">
-                            </div>
-                        </div>
-                    </li>
+    <!-- BOTTOM SECTION > ALL ARTICLES AND POPULAR ARTICLES -->
+    <section class="container" id="article-list">
+        <div class="row" >
+            <div class="m-article col-12 col-md-8">
+                <ul class="p-0 unlisted" id="infinite-article-list" >
                 </ul>
             </div>
-        <!-- ASIDE > NEWS FROM YOUR NETWORK AND POPULAR BLOCKS -->
-            <aside class="d-none d-md-block d-lg-block d-xl-block col-md-4 sticky-top pl-0">
-                <div class="card mb-3 border-0">
+
+            <aside class="d-lg-block d-xl-block col-md-4 sticky-top pl-0">
+                <div class="card mb-3 border-0 d-none d-md-block">
                     <div id="new-network-cover" class="news-cover col-12 d-flex align-items-end pb-2 pt-4">
                         <div class="col-7 pl-1">
                             <h4>New from your network</h4>
@@ -516,17 +287,17 @@
                         <ul class="list-group list-group-flush d-flex align-items-start justify-content-center w-100 py-3">
                             <li class="list-group-item bg-light my-2 w-100">
                                 <div class="media">
-                                    <img id="card-avatar" src="${avatar}" class="rounded-circle dropdown-toggle mr-3" height="35px" type="button" alt="profile-avatar" id="dropdownAvatar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img id="card-avatar" src="https://significadoconcepto.com/wp-content/uploads/2017/12/avatar.jpg" class="rounded-circle dropdown-toggle mr-3" height="35px" type="button" alt="profile-avatar" id="dropdownAvatar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <div class="media-body">
-                                        <h6 class="card-title mb-1" id="card-title-h6">${title}</h6>
+                                        <h6 class="card-title mb-1" id="card-title-h6">Does “Midwest Nice” Breed Racism?</h6>
                                         <div class="d-flex justify-content-center" id="card-footer">
                                             <div class="col-12 p-0">
                                                 <div class="d-flex m-0" id="who">
-                                                    <p class="card-text mr-2" id="card-user"><a href="http://" style="text-decoration:none; color:black; font-weight:500">${user}</a></p>
+                                                    <p class="card-text mr-2" id="card-user"><a href="http://" style="text-decoration:none; color:black; font-weight:500">Shanna Loga</a></p>
                                                 </div>
                                                 <div class="d-flex justify-content-start align-items-center">
-                                                    <p class="card-text my-0 mr-2" id="card-date" style="color:gray; font-size:.9em">${date}</p>
-                                                    <p class="card-text my-0 mr-2" id="card-time" style="color:gray; font-size:.9em">${time} min</p>
+                                                    <p class="card-text my-0 mr-2" id="card-date" style="color:gray; font-size:.9em">9/3/2020 ・ </p>
+                                                    <p class="card-text my-0 mr-2" id="card-time" style="color:gray; font-size:.9em">8 min read</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -535,17 +306,17 @@
                             </li>
                             <li class="list-group-item bg-light my-2 w-100">
                                 <div class="media">
-                                    <img id="card-avatar" src="${avatar}" class="rounded-circle dropdown-toggle mr-3" height="35px" type="button" alt="profile-avatar" id="dropdownAvatar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img id="card-avatar" src="https://1.bp.blogspot.com/_Vn0fwHGJAbY/TUTMraD6o8I/AAAAAAAAALw/OiC9INHFiPE/s1600/manga+avatar+smaller.jpg" class="rounded-circle dropdown-toggle mr-3" height="35px" type="button" alt="profile-avatar" id="dropdownAvatar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <div class="media-body">
-                                        <h6 class="card-title mb-1" id="card-title-h6">${title}</h6>
+                                        <h6 class="card-title mb-1" id="card-title-h6">This Lawyer Ran Errands for His High-Risk Wife.</h6>
                                         <div class="d-flex justify-content-center" id="card-footer">
                                             <div class="col-12 p-0">
                                                 <div class="d-flex m-0" id="who">
-                                                    <p class="card-text mr-2" id="card-user"><a href="http://" style="text-decoration:none; color:black; font-weight:500">${user}</a></p>
+                                                    <p class="card-text mr-2" id="card-user"><a href="http://" style="text-decoration:none; color:black; font-weight:500">Sarah Collins</a></p>
                                                 </div>
                                                 <div class="d-flex justify-content-start align-items-center">
-                                                    <p class="card-text my-0 mr-2" id="card-date" style="color:gray; font-size:.9em">${date}</p>
-                                                    <p class="card-text my-0 mr-2" id="card-time" style="color:gray; font-size:.9em">${time} min</p>
+                                                    <p class="card-text my-0 mr-2" id="card-date" style="color:gray; font-size:.9em">9/14/2020 ・ </p>
+                                                    <p class="card-text my-0 mr-2" id="card-time" style="color:gray; font-size:.9em">13 min read</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -554,17 +325,17 @@
                             </li>
                             <li class="list-group-item bg-light my-2 w-100">
                                 <div class="media">
-                                    <img id="card-avatar" src="${avatar}" class="rounded-circle dropdown-toggle mr-3" height="35px" type="button" alt="profile-avatar" id="dropdownAvatar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img id="card-avatar" src="http://s.vida20.com/wp-content/uploads/2009/08/q256_avatar.png" class="rounded-circle dropdown-toggle mr-3" height="35px" type="button" alt="profile-avatar" id="dropdownAvatar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <div class="media-body">
-                                        <h6 class="card-title mb-1" id="card-title-h6">${title}</h6>
+                                        <h6 class="card-title mb-1" id="card-title-h6">The GOP Stole Satire From the Left</h6>
                                         <div class="d-flex justify-content-center" id="card-footer">
                                             <div class="col-12 p-0">
                                                 <div class="d-flex m-0" id="who">
-                                                    <p class="card-text mr-2" id="card-user"><a href="http://" style="text-decoration:none; color:black; font-weight:500">${user}</a></p>
+                                                    <p class="card-text mr-2" id="card-user"><a href="http://" style="text-decoration:none; color:black; font-weight:500">Douglas Rushkoff</a></p>
                                                 </div>
                                                 <div class="d-flex justify-content-start align-items-center">
-                                                    <p class="card-text my-0 mr-2" id="card-date" style="color:gray; font-size:.9em">${date}</p>
-                                                    <p class="card-text my-0 mr-2" id="card-time" style="color:gray; font-size:.9em">${time} min</p>
+                                                    <p class="card-text my-0 mr-2" id="card-date" style="color:gray; font-size:.9em">9/16/2020 ・ </p>
+                                                    <p class="card-text my-0 mr-2" id="card-time" style="color:gray; font-size:.9em">8 min read</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -573,17 +344,17 @@
                             </li>
                             <li class="list-group-item bg-light my-2 w-100">
                                 <div class="media">
-                                    <img id="card-avatar" src="${avatar}" class="rounded-circle dropdown-toggle mr-3" height="35px" type="button" alt="profile-avatar" id="dropdownAvatar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img id="card-avatar" src="https://thumbs.dreamstime.com/t/woman-female-avatar-illustration-black-hair-pink-shirt-blue-eyes-wearing-chevron-background-83635312.jpg" class="rounded-circle dropdown-toggle mr-3" height="35px" type="button" alt="profile-avatar" id="dropdownAvatar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <div class="media-body">
-                                        <h6 class="card-title mb-1" id="card-title-h6">${title}</h6>
+                                        <h6 class="card-title mb-1" id="card-title-h6">Asexuality Is Not Just for White People</h6>
                                         <div class="d-flex justify-content-center" id="card-footer">
                                             <div class="col-12 p-0">
                                                 <div class="d-flex m-0" id="who">
-                                                    <p class="card-text mr-2" id="card-user"><a href="http://" style="text-decoration:none; color:black; font-weight:500">${user}</a></p>
+                                                    <p class="card-text mr-2" id="card-user"><a href="http://" style="text-decoration:none; color:black; font-weight:500">Deena ElGenaidi</a></p>
                                                 </div>
                                                 <div class="d-flex justify-content-start align-items-center">
-                                                    <p class="card-text my-0 mr-2" id="card-date" style="color:gray; font-size:.9em">${date}</p>
-                                                    <p class="card-text my-0 mr-2" id="card-time" style="color:gray; font-size:.9em">${time} min</p>
+                                                    <p class="card-text my-0 mr-2" id="card-date" style="color:gray; font-size:.9em">9/14/2020 ・ </p>
+                                                    <p class="card-text my-0 mr-2" id="card-time" style="color:gray; font-size:.9em">5 min read</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -593,138 +364,34 @@
                         </ul>
                     </div>
                 </div>
-                <!-- ASIDE > POPULAR ON MEDIUM -->
                 <div class="row">
                     <div class="col-12">
                         <div class="card mx-0 mt-4 border-0">
                             <h4 class="col-12 pb-0">Popular on Medium</h4>
                             <div class="col-12 mx-0">
                                 <hr class="my-0">
-                                <ul class="p-0 unlisted pt-4 pb-3">
-                                    <li class="media mb-4">
-                                        <div class="media-body row d-flex justify-content-between align-items-start">
-                                            <div class="col-2 popularity text-right p-0 super-light-grey-text">
-                                                <h1 class="w-100">01</h1>
-                                            </div>
-                                            <div class="col-10 pr-0">
-                                                <div class="media-body">
-                                                    <h6 class="card-title mb-1"id="card-title-h6">${title}</h6>
-                                                    <div class="d-flex justify-content-center" id="card-footer">
-                                                        <div class="col-12 p-0">
-                                                            <div class="d-flex m-0" id="who">
-                                                                <p class="card-text mr-2" id="card-user"><a href="http://" style="text-decoration:none; color:black; font-weight:500">${user}</a></p>
-                                                            </div>
-                                                            <div class="d-flex justify-content-start align-items-center">
-                                                                <p class="card-text my-0 mr-2" id="card-date" style="color:gray; font-size:.9em">${date}</p>
-                                                                <p class="card-text my-0 mr-2" id="card-time" style="color:gray; font-size:.9em">${time} min</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="media mb-4">
-                                        <div class="media-body row d-flex justify-content-between align-items-start">
-                                            <div class="col-2 popularity text-right p-0 super-light-grey-text">
-                                                <h1 class="w-100">02</h1>
-                                            </div>
-                                            <div class="col-10 pr-0">
-                                                <div class="media-body">
-                                                    <h6 class="card-title mb-1"id="card-title-h6">${title}</h6>
-                                                    <div class="d-flex justify-content-center" id="card-footer">
-                                                        <div class="col-12 p-0">
-                                                            <div class="d-flex m-0" id="who">
-                                                                <p class="card-text mr-2" id="card-user"><a href="http://" style="text-decoration:none; color:black; font-weight:500">${user}</a></p>
-                                                            </div>
-                                                            <div class="d-flex justify-content-start align-items-center">
-                                                                <p class="card-text my-0 mr-2" id="card-date" style="color:gray; font-size:.9em">${date}</p>
-                                                                <p class="card-text my-0 mr-2" id="card-time" style="color:gray; font-size:.9em">${time} min</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="media mb-4">
-                                        <div class="media-body row d-flex justify-content-between align-items-start">
-                                            <div class="col-2 popularity text-right p-0 super-light-grey-text">
-                                                <h1 class="w-100">03</h1>
-                                            </div>
-                                            <div class="col-10 pr-0">
-                                                <div class="media-body">
-                                                    <h6 class="card-title mb-1"id="card-title-h6">${title}</h6>
-                                                    <div class="d-flex justify-content-center" id="card-footer">
-                                                        <div class="col-12 p-0">
-                                                            <div class="d-flex m-0" id="who">
-                                                                <p class="card-text mr-2" id="card-user"><a href="http://" style="text-decoration:none; color:black; font-weight:500">${user}</a></p>
-                                                            </div>
-                                                            <div class="d-flex justify-content-start align-items-center">
-                                                                <p class="card-text my-0 mr-2" id="card-date" style="color:gray; font-size:.9em">${date}</p>
-                                                                <p class="card-text my-0 mr-2" id="card-time" style="color:gray; font-size:.9em">${time} min</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="media mb-4">
-                                        <div class="media-body row d-flex justify-content-between align-items-start">
-                                            <div class="col-2 popularity text-right p-0 super-light-grey-text">
-                                                <h1 class="w-100">04</h1>
-                                            </div>
-                                            <div class="col-10 pr-0">
-                                                <div class="media-body">
-                                                    <h6 class="card-title mb-1"id="card-title-h6">${title}</h6>
-                                                    <div class="d-flex justify-content-center" id="card-footer">
-                                                        <div class="col-12 p-0">
-                                                            <div class="d-flex m-0" id="who">
-                                                                <p class="card-text mr-2" id="card-user"><a href="http://" style="text-decoration:none; color:black; font-weight:500">${user}</a></p>
-                                                            </div>
-                                                            <div class="d-flex justify-content-start align-items-center">
-                                                                <p class="card-text my-0 mr-2" id="card-date" style="color:gray; font-size:.9em">${date}</p>
-                                                                <p class="card-text my-0 mr-2" id="card-time" style="color:gray; font-size:.9em">${time} min</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
+                                <ul id="popular-on-medium" class="p-0 unlisted pt-4 pb-3">
+                                    
                                 </ul>
-                            <footer class="mt-2 border-top">
-                                <ul class="list-inline light-grey-text">
-                                    <li class="list-inline-item">Help</li>
-                                    <li class="list-inline-item">Status</li>
-                                    <li class="list-inline-item">Writers</li>
-                                    <li class="list-inline-item">Blog</li>
-                                    <li class="list-inline-item">Careers</li>
-                                    <li class="list-inline-item">Privacy</li>
-                                    <li class="list-inline-item">Terms</li>
-                                    <li class="list-inline-item">About</li>
-                                </ul>
-                            </footer>
+                                <footer class="mt-2 border-top">
+                                    <ul class="list-inline light-grey-text">
+                                        <li class="list-inline-item">Help</li>
+                                        <li class="list-inline-item">Status</li>
+                                        <li class="list-inline-item">Writers</li>
+                                        <li class="list-inline-item">Blog</li>
+                                        <li class="list-inline-item">Careers</li>
+                                        <li class="list-inline-item">Privacy</li>
+                                        <li class="list-inline-item">Terms</li>
+                                        <li class="list-inline-item">About</li>
+                                    </ul>
+                                </footer>
+                            </div>
                         </div>
                     </div>
                 </div>
             </aside>
         </div>
     </section>
-
-    <!-- <section class="container">
-        <div class="row">
-            <div class="col-12">
-                
-                <div class="tooltip-group">
-                    <div class="tooltip-body w-25 rounded .bg-light p-3
-                    ">Este es el tooltip</div>
-                    <p>Aqui va el autor</p>
-                </div>
-            </div>
-        </div>
-    </section> -->
 
     <!-- jQuery and Popper.js -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
