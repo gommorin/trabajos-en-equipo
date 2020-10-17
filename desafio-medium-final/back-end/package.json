@@ -1,0 +1,31 @@
+{
+  "name": "back-end",
+  "version": "1.0.0",
+  "description": "\"desafío back-end\"",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "lint": "standard --fix | snazzy"
+  },
+  "keywords": [
+    "desafio backend",
+    "medium",
+    "aaron-barcenas",
+    "eddy-ruiz",
+    "luis-bastida",
+    "luis-gomez"
+  ],
+  "author": "equipo leal",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.9"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.5",
+    "snazzy": "^8.0.0",
+    "standard": "^14.3.4"
+  }
+}

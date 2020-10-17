@@ -58,6 +58,8 @@ const getPostData = () => {
 
 $("#nextButton").click(getMetaData)
 $("#saveButton").click(getPostData)
+
+
 // FUNCIONES PARA RELLENAR CADA SECCIÓN
 function obtainingArticle() {
     $.ajax({
@@ -67,7 +69,6 @@ function obtainingArticle() {
             console.log(response);
             articlesCollection = response;
             let articlesPosts = response;
-            
             
             console.log(articlesPosts);
             console.log(articlesCollection);
