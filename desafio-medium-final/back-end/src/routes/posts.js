@@ -27,13 +27,13 @@ router.get('/', async (request, response) => {
 router.get('/:id', async (request, response) => {
   try {
     const { id } = request.params
-    const postById = await posts.getPostById(id)
+    const getPost = await posts.getPostById(id)
 
     response.json({
       success: true,
       message: 'post found',
       data: {
-        posts: postById
+        posts: getPost
       }
     })
   } catch (error) {
@@ -61,17 +61,17 @@ router.post('/', async (request, response) => {
       mediumLink
     } = request.body
 
-    if (!cover) throw new Error('cover is required')
-    if (!title) throw new Error('title is required')
-    if (!summary) throw new Error('summary is required')
-    if (!user) throw new Error('user is required')
-    if (!section) throw new Error('section is required')
-    if (!date) throw new Error('date is required')
-    if (!time) throw new Error('time is required')
-    if (!popular) throw new Error('popular is required')
-    if (!ranking) throw new Error('ranking is required')
-    if (!editorPick) throw new Error('editorPick is required')
-    if (!mediumLink) throw new Error('mediumLink is required')
+    // if (!cover) throw new Error('cover is required')
+    // if (!title) throw new Error('title is required')
+    // if (!summary) throw new Error('summary is required')
+    // if (!user) throw new Error('user is required')
+    // if (!section) throw new Error('section is required')
+    // if (!date) throw new Error('date is required')
+    // if (!time) throw new Error('time is required')
+    // if (popular == null) throw new Error('popular is required')
+    // if (!ranking) throw new Error('ranking is required')
+    // if (editorPick == null) throw new Error('editorPick is required')
+    // if (!mediumLink) throw new Error('mediumLink is required')
 
     const newPost = await posts.createPost({
       cover,

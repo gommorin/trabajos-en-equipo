@@ -8,7 +8,7 @@ function getPostById (id) {
   return Posts.findById(id)
 }
 
-function createPost (postData) {
+function create (postData) {
   return Posts.create(postData)
 }
 
@@ -23,7 +23,7 @@ function updatePostById (id, newPostData) {
 module.exports = {
   getAllPosts,
   getPostById,
-  createPost,
+  create,
   deletePostById,
   updatePostById
 }

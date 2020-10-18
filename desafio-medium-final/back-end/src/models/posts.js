@@ -31,9 +31,8 @@ const postSchema = new mongoose.Schema({
     min: 1
   },
   popular: {
-    type: Boolean,
+    type: String,
     require: true,
-    default: false
   },
   ranking: {
     type: Number,
@@ -41,9 +40,8 @@ const postSchema = new mongoose.Schema({
     min: 0
   },
   editorPick: {
-    type: Boolean,
+    type: String,
     require: true,
-    default: false
   },
   mediumLink: {
     type: String,
