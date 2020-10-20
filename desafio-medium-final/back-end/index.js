@@ -9,9 +9,9 @@ console.log('env: ', process.env.DB_USER)
 
 db.connect()
   .then(() => {
-    console.log('DB connected')
+    console.log('Base de datos conectada')
     server.listen(8080, () => {
-      console.log('server running')
+      console.log('El servidor está escuchando correctamente')
     })
   })
   .catch((error) => {
